@@ -77,6 +77,12 @@
     <Compile Include="Frm_Calender.Designer.cs">
       <DependentUpon>Frm_Calender.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_KhaoSat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_KhaoSat.Designer.cs">
+      <DependentUpon>Frm_KhaoSat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,13 +107,24 @@
     <Compile Include="GiaoDienChinh.Designer.cs">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="KSsv.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinhVien\SinhVien.cs" />
+    <Compile Include="Usercontrol\KiemSinhvVienNghi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usercontrol\KiemSinhvVienNghi.Designer.cs">
+      <DependentUpon>KiemSinhvVienNghi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmDangKi.resx">
       <DependentUpon>FrmDangKi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Calender.resx">
       <DependentUpon>Frm_Calender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_KhaoSat.resx">
+      <DependentUpon>Frm_KhaoSat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Login.resx">
       <DependentUpon>Frm_Login.cs</DependentUpon>
@@ -125,6 +142,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usercontrol\KiemSinhvVienNghi.resx">
+      <DependentUpon>KiemSinhvVienNghi.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -180,7 +200,6 @@
     <None Include="Anh\maintenance_32px.png" />
     <None Include="Anh\login.png" />
     <Content Include="DevComponents.DotNetBar2.dll" />
-    <Content Include="TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

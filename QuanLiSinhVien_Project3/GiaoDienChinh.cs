@@ -174,5 +174,27 @@ namespace QuanLiSinhVien_Project3
         {
 
         }
+
+        private void btnKhaosat_Click(object sender, EventArgs e)
+        {
+            this.trangThai = true;
+            this.tentabmo = "Khảo Sát";
+            if (!Kiemtramotab(tentabmo))
+            {
+                TabItem t = tabcontrol_center.CreateTab(tentabmo);
+                t.Name = "Frm_KhaoSat";
+
+                Frm_KhaoSat frmkhaosat = new Frm_KhaoSat()
+                {
+                    DongTap = new Frm_KhaoSat.adongTap(DongTab),
+                    frm = this,
+                    TopLevel = false,
+                    Dock = DockStyle.Fill,
+                };
+                t.AttachedControl.Controls.Add(frmkhaosat);
+                frmkhaosat.Show();
+                tabcontrol_center.SelectedTabIndex = tabcontrol_center.Tabs.Count - 1;
+            }
+        }
     }
 }

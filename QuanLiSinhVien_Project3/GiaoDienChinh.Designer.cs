@@ -179,6 +179,7 @@ namespace QuanLiSinhVien_Project3
             this.btnKhaosat.Text = "Khảo sát";
             this.btnKhaosat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnKhaosat.UseVisualStyleBackColor = false;
+            this.btnKhaosat.Click += new System.EventHandler(this.btnKhaosat_Click);
             // 
             // btnHelp
             // 
