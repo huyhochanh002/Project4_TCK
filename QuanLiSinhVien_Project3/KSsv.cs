@@ -14,7 +14,7 @@ namespace QuanLiSinhVien_Project3
     /// làm chung cho đồng bộ
     /// </summary>
         public static List<SinhVien.SinhVien> ListSV = new List<SinhVien.SinhVien>();
-        public static string pathfile = string.Format(@"{0}\Sinhvien.txt", Application.StartupPath);
+        public static string pathfile = string.Format(@"{0}\Sinhvien.ini", Application.StartupPath);
         public void GetNguoi(string path)
         {
             using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate, FileAccess.Read, FileShare.Read))
