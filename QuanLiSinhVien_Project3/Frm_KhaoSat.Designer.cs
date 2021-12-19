@@ -29,9 +29,9 @@ namespace QuanLiSinhVien_Project3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnkhaosat_full = new System.Windows.Forms.Panel();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.kiemSinhvVienNghi1 = new QuanLiSinhVien_Project3.Usercontrol.KiemSinhvVienNghi();
+            this.button1 = new System.Windows.Forms.Button();
             this.datasinhviendihoc = new System.Windows.Forms.DataGridView();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +42,9 @@ namespace QuanLiSinhVien_Project3
             this.colLOP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colHDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.refresh = new System.Windows.Forms.Timer(this.components);
+            this.kiemSinhvVienNghi1 = new QuanLiSinhVien_Project3.Usercontrol.KiemSinhvVienNghi();
             this.pnkhaosat_full.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datasinhviendihoc)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +52,7 @@ namespace QuanLiSinhVien_Project3
             // pnkhaosat_full
             // 
             this.pnkhaosat_full.BackColor = System.Drawing.Color.SkyBlue;
+            this.pnkhaosat_full.Controls.Add(this.button1);
             this.pnkhaosat_full.Controls.Add(this.datasinhviendihoc);
             this.pnkhaosat_full.Controls.Add(this.kiemSinhvVienNghi1);
             this.pnkhaosat_full.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -57,14 +61,18 @@ namespace QuanLiSinhVien_Project3
             this.pnkhaosat_full.Size = new System.Drawing.Size(800, 450);
             this.pnkhaosat_full.TabIndex = 0;
             // 
-            // kiemSinhvVienNghi1
+            // button1
             // 
-            this.kiemSinhvVienNghi1.BackColor = System.Drawing.Color.SkyBlue;
-            this.kiemSinhvVienNghi1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kiemSinhvVienNghi1.Location = new System.Drawing.Point(0, 0);
-            this.kiemSinhvVienNghi1.Name = "kiemSinhvVienNghi1";
-            this.kiemSinhvVienNghi1.Size = new System.Drawing.Size(800, 198);
-            this.kiemSinhvVienNghi1.TabIndex = 0;
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(261, 124);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(197, 44);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Tìm Kiếm";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // datasinhviendihoc
             // 
@@ -85,6 +93,7 @@ namespace QuanLiSinhVien_Project3
             this.datasinhviendihoc.Location = new System.Drawing.Point(0, 198);
             this.datasinhviendihoc.Name = "datasinhviendihoc";
             this.datasinhviendihoc.ReadOnly = true;
+            this.datasinhviendihoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.datasinhviendihoc.Size = new System.Drawing.Size(800, 252);
             this.datasinhviendihoc.TabIndex = 1;
             // 
@@ -151,6 +160,20 @@ namespace QuanLiSinhVien_Project3
             this.colTT.Name = "colTT";
             this.colTT.ReadOnly = true;
             // 
+            // refresh
+            // 
+            this.refresh.Interval = 30000;
+            this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
+            // 
+            // kiemSinhvVienNghi1
+            // 
+            this.kiemSinhvVienNghi1.BackColor = System.Drawing.Color.SkyBlue;
+            this.kiemSinhvVienNghi1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kiemSinhvVienNghi1.Location = new System.Drawing.Point(0, 0);
+            this.kiemSinhvVienNghi1.Name = "kiemSinhvVienNghi1";
+            this.kiemSinhvVienNghi1.Size = new System.Drawing.Size(800, 198);
+            this.kiemSinhvVienNghi1.TabIndex = 0;
+            // 
             // Frm_KhaoSat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -182,5 +205,7 @@ namespace QuanLiSinhVien_Project3
         private System.Windows.Forms.DataGridViewTextBoxColumn colLOP;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTT;
+        private System.Windows.Forms.Timer refresh;
+        private System.Windows.Forms.Button button1;
     }
 }

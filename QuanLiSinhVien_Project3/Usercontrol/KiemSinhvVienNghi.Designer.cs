@@ -35,7 +35,6 @@ namespace QuanLiSinhVien_Project3.Usercontrol
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btn_tim = new System.Windows.Forms.Button();
             this.lb_thongbao = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -46,6 +45,7 @@ namespace QuanLiSinhVien_Project3.Usercontrol
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(203, 29);
             this.ID.TabIndex = 0;
+            this.ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ID_KeyPress);
             // 
             // Tensinhvien
             // 
@@ -100,20 +100,6 @@ namespace QuanLiSinhVien_Project3.Usercontrol
             this.label3.Text = "Tình Trạng";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_tim
-            // 
-            this.btn_tim.AutoSize = true;
-            this.btn_tim.BackColor = System.Drawing.Color.Azure;
-            this.btn_tim.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btn_tim.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Yellow;
-            this.btn_tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tim.Location = new System.Drawing.Point(259, 139);
-            this.btn_tim.Name = "btn_tim";
-            this.btn_tim.Size = new System.Drawing.Size(203, 47);
-            this.btn_tim.TabIndex = 3;
-            this.btn_tim.Text = "Tìm Kiếm";
-            this.btn_tim.UseVisualStyleBackColor = false;
-            // 
             // lb_thongbao
             // 
             this.lb_thongbao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,7 +115,6 @@ namespace QuanLiSinhVien_Project3.Usercontrol
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.Controls.Add(this.lb_thongbao);
-            this.Controls.Add(this.btn_tim);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -151,7 +136,6 @@ namespace QuanLiSinhVien_Project3.Usercontrol
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btn_tim;
         private System.Windows.Forms.Label lb_thongbao;
     }
 }
