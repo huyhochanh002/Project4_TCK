@@ -192,7 +192,6 @@
     <None Include="Anh\exit22.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dulieuduphong.txt" />
     <None Include="Resources\exit_32px.png" />
     <None Include="Resources\no_32px.png" />
     <None Include="Anh\add_32px.png" />
