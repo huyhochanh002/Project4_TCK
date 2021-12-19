@@ -33,7 +33,13 @@ namespace QuanLiSinhVien_Project3
             this.pnkhaosat_full = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.datasinhviendihoc = new System.Windows.Forms.DataGridView();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.refresh = new System.Windows.Forms.Timer(this.components);
+            this.button2 = new System.Windows.Forms.Button();
+            this.kiemSinhvVienNghi1 = new QuanLiSinhVien_Project3.Usercontrol.KiemSinhvVienNghi();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coldiachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coldiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNGAYSINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colGIOITINH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,9 +48,6 @@ namespace QuanLiSinhVien_Project3
             this.colLOP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colHDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.refresh = new System.Windows.Forms.Timer(this.components);
-            this.kiemSinhvVienNghi1 = new QuanLiSinhVien_Project3.Usercontrol.KiemSinhvVienNghi();
             this.pnkhaosat_full.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datasinhviendihoc)).BeginInit();
             this.SuspendLayout();
@@ -52,6 +55,7 @@ namespace QuanLiSinhVien_Project3
             // pnkhaosat_full
             // 
             this.pnkhaosat_full.BackColor = System.Drawing.Color.SkyBlue;
+            this.pnkhaosat_full.Controls.Add(this.button2);
             this.pnkhaosat_full.Controls.Add(this.button1);
             this.pnkhaosat_full.Controls.Add(this.datasinhviendihoc);
             this.pnkhaosat_full.Controls.Add(this.kiemSinhvVienNghi1);
@@ -63,8 +67,6 @@ namespace QuanLiSinhVien_Project3
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(261, 124);
             this.button1.Name = "button1";
@@ -78,9 +80,12 @@ namespace QuanLiSinhVien_Project3
             // 
             this.datasinhviendihoc.AllowUserToAddRows = false;
             this.datasinhviendihoc.AllowUserToDeleteRows = false;
+            this.datasinhviendihoc.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.datasinhviendihoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datasinhviendihoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colID,
+            this.coldiachi,
+            this.coldiem,
             this.colTEN,
             this.colNGAYSINH,
             this.colGIOITINH,
@@ -97,12 +102,53 @@ namespace QuanLiSinhVien_Project3
             this.datasinhviendihoc.Size = new System.Drawing.Size(800, 252);
             this.datasinhviendihoc.TabIndex = 1;
             // 
+            // refresh
+            // 
+            this.refresh.Interval = 30000;
+            this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Cyan;
+            this.button2.Image = global::QuanLiSinhVien_Project3.Properties.Resources.no_32px1;
+            this.button2.Location = new System.Drawing.Point(749, 12);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(39, 39);
+            this.button2.TabIndex = 3;
+            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // kiemSinhvVienNghi1
+            // 
+            this.kiemSinhvVienNghi1.BackColor = System.Drawing.Color.SkyBlue;
+            this.kiemSinhvVienNghi1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.kiemSinhvVienNghi1.Location = new System.Drawing.Point(0, 0);
+            this.kiemSinhvVienNghi1.Name = "kiemSinhvVienNghi1";
+            this.kiemSinhvVienNghi1.Size = new System.Drawing.Size(800, 198);
+            this.kiemSinhvVienNghi1.TabIndex = 0;
+            // 
             // colID
             // 
             this.colID.DataPropertyName = "Id";
             this.colID.HeaderText = "ID";
             this.colID.Name = "colID";
             this.colID.ReadOnly = true;
+            // 
+            // coldiachi
+            // 
+            this.coldiachi.DataPropertyName = "Diachi";
+            this.coldiachi.HeaderText = "Địa Chỉ";
+            this.coldiachi.Name = "coldiachi";
+            this.coldiachi.ReadOnly = true;
+            // 
+            // coldiem
+            // 
+            this.coldiem.DataPropertyName = "Diem";
+            this.coldiem.HeaderText = "Điểm";
+            this.coldiem.Name = "coldiem";
+            this.coldiem.ReadOnly = true;
             // 
             // colTEN
             // 
@@ -134,7 +180,7 @@ namespace QuanLiSinhVien_Project3
             // 
             // colNGANHHOC
             // 
-            this.colNGANHHOC.DataPropertyName = "Nganhhoc";
+            this.colNGANHHOC.DataPropertyName = "Nghanghoc";
             this.colNGANHHOC.HeaderText = "NGHÀNG HỌC";
             this.colNGANHHOC.Name = "colNGANHHOC";
             this.colNGANHHOC.ReadOnly = true;
@@ -155,24 +201,11 @@ namespace QuanLiSinhVien_Project3
             // 
             // colTT
             // 
+            this.colTT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.colTT.DataPropertyName = "Tinhtrang";
             this.colTT.HeaderText = "TÌNH TRẠNG";
             this.colTT.Name = "colTT";
             this.colTT.ReadOnly = true;
-            // 
-            // refresh
-            // 
-            this.refresh.Interval = 30000;
-            this.refresh.Tick += new System.EventHandler(this.refresh_Tick);
-            // 
-            // kiemSinhvVienNghi1
-            // 
-            this.kiemSinhvVienNghi1.BackColor = System.Drawing.Color.SkyBlue;
-            this.kiemSinhvVienNghi1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.kiemSinhvVienNghi1.Location = new System.Drawing.Point(0, 0);
-            this.kiemSinhvVienNghi1.Name = "kiemSinhvVienNghi1";
-            this.kiemSinhvVienNghi1.Size = new System.Drawing.Size(800, 198);
-            this.kiemSinhvVienNghi1.TabIndex = 0;
             // 
             // Frm_KhaoSat
             // 
@@ -196,7 +229,12 @@ namespace QuanLiSinhVien_Project3
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DataGridView datasinhviendihoc;
         private Usercontrol.KiemSinhvVienNghi kiemSinhvVienNghi1;
+        private System.Windows.Forms.Timer refresh;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coldiachi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn coldiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTEN;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNGAYSINH;
         private System.Windows.Forms.DataGridViewTextBoxColumn colGIOITINH;
@@ -205,7 +243,5 @@ namespace QuanLiSinhVien_Project3
         private System.Windows.Forms.DataGridViewTextBoxColumn colLOP;
         private System.Windows.Forms.DataGridViewTextBoxColumn colHDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTT;
-        private System.Windows.Forms.Timer refresh;
-        private System.Windows.Forms.Button button1;
     }
 }

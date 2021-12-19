@@ -280,7 +280,7 @@ namespace QuanLiSinhVien_Project3
             this.Controls.Add(this.pn_center);
             this.Controls.Add(this.pn_top);
             this.Controls.Add(this.pn_left);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "GiaoDienChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.GiaoDienChinh_Load);
