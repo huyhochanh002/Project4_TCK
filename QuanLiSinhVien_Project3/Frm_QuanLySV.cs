@@ -92,9 +92,16 @@ namespace QuanLiSinhVien_Project3
         {
             if (sinhVien != null)
             {
-                KSsv.ListSV.Remove(sinhVien);
-                GhiFile(KSsv.pathfile);
+                foreach (SinhVien.SinhVien item in KSsv.ListSV)
+                {
+                    if (item.Id == sinhVien.Id)
+                    {
+                        KSsv.ListSV.Remove(item);
+                        return;
+                    }
+                }
                 sinhVien = null;
+                GhiFile(KSsv.pathfile);
                 Hienthi();
             }
         }
