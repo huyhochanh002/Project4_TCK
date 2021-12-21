@@ -20,9 +20,7 @@ namespace QuanLiSinhVien_Project3.SinhVien
         private string diachi;
         private int diem;
 
-        public SinhVien()
-        {
-        }
+        public SinhVien(){}
 
         public SinhVien(long id, string ten, string ngaysinh, string gioitinh, string sdt, string nghanghoc, string lop, string hedaotao, int tinhtrang, string diachi, int diem)
         {
