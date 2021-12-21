@@ -89,5 +89,10 @@ namespace QuanLiSinhVien_Project3
             bin.DataSource = listtam;
             datasinhviendihoc.DataSource = bin;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DongTap();
+        }
     }
 }

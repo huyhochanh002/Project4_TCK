@@ -38,6 +38,8 @@ namespace QuanLiSinhVien_Project3
                             sv.Lop = svarray[6];
                             sv.Hedaotao = svarray[7];
                             sv.Tinhtrang = Convert.ToInt32(svarray[8]);
+                            sv.Diachi = svarray[9];
+                            sv.Diem = Convert.ToInt32(svarray[10]);
                             ListSV.Add(sv);
 
                         }
