@@ -22,7 +22,6 @@ namespace QuanLiSinhVien_Project3
         
         private void Frm_KhaoSat_Load(object sender, EventArgs e)
         {
-            refresh.Start();
             Loaddata();
         }
         public void Loaddata()
@@ -32,10 +31,6 @@ namespace QuanLiSinhVien_Project3
             BindingSource bin = new BindingSource();
             bin.DataSource = KSsv.ListSV;
             datasinhviendihoc.DataSource = bin;
-        }
-        private void refresh_Tick(object sender, EventArgs e)
-        {
-            Loaddata();
         }
         List<SinhVien.SinhVien> listtam = new List<SinhVien.SinhVien>();
         private void button1_Click(object sender, EventArgs e)
@@ -114,6 +109,11 @@ namespace QuanLiSinhVien_Project3
                     xuat.Xuatexcelne(datasinhviendihoc, open.FileName);
                 }
             }
+        }
+
+        private void bth_refesh_Click(object sender, EventArgs e)
+        {
+            Loaddata();
         }
     }
 }
