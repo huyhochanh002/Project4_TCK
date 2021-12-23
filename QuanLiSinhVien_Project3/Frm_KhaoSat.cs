@@ -94,5 +94,10 @@ namespace QuanLiSinhVien_Project3
         {
             DongTap();
         }
+
+        private void kiemSinhvVienNghi1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

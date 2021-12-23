@@ -51,6 +51,10 @@
     <Reference Include="DevComponents.DotNetBar2">
       <HintPath>..\..\..\DevComponents.DotNetBar2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -117,6 +121,7 @@
     <Compile Include="Usercontrol\KiemSinhvVienNghi.Designer.cs">
       <DependentUpon>KiemSinhvVienNghi.cs</DependentUpon>
     </Compile>
+    <Compile Include="XuatFileEX.cs" />
     <EmbeddedResource Include="FrmDangKi.resx">
       <DependentUpon>FrmDangKi.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +151,7 @@
     <EmbeddedResource Include="Usercontrol\KiemSinhvVienNghi.resx">
       <DependentUpon>KiemSinhvVienNghi.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -192,6 +198,7 @@
     <None Include="Anh\exit22.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Anh\search_32px.png" />
     <Content Include="TextFile1.txt" />
     <None Include="Resources\exit_32px.png" />
     <None Include="Resources\no_32px.png" />
