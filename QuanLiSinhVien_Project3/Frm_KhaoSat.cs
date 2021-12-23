@@ -99,5 +99,21 @@ namespace QuanLiSinhVien_Project3
         {
 
         }
+        XuatFileEX xuat = new XuatFileEX();
+        private void btn_xuatexks_Click(object sender, EventArgs e)
+        {
+            if (listtam.Count > 0)
+            {
+                SaveFileDialog open = new SaveFileDialog();
+                open.InitialDirectory = @"d:\";
+                open.Filter = "Execl files (*.xlsx)|*.xlsx";
+                open.Title = "Lưu File Excel";
+                open.DefaultExt = "xlsx";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    xuat.Xuatexcelne(datasinhviendihoc, open.FileName);
+                }
+            }
+        }
     }
 }
