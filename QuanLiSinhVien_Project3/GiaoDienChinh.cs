@@ -146,15 +146,15 @@ namespace QuanLiSinhVien_Project3
         private void btnTimkiem_Click(object sender, EventArgs e)
         {
             this.trangThai = true;
-            this.tentabmo = "Đăng Ký Học Phần";
+            this.tentabmo = "Danh Sách Lớp";
             if (!Kiemtramotab(tentabmo))
             {
                 TabItem t = tabcontrol_center.CreateTab(tentabmo);
                 t.Name = "Frm_Calendar";
 
-                FrmDangKi frmDangKi = new FrmDangKi()
+                timLop frmDangKi = new timLop()
                 {
-                    DongTap = new FrmDangKi._dongTap(DongTab),
+                    DongTap = new timLop._dongTap(DongTab),
                     frm = this,
                     TopLevel = false,
                     Dock = DockStyle.Fill,
