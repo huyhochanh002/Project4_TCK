@@ -93,5 +93,10 @@ namespace QuanLiSinhVien_Project3
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

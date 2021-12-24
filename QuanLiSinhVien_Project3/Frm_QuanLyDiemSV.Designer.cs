@@ -32,7 +32,7 @@ namespace QuanLiSinhVien_Project3
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewQLD = new System.Windows.Forms.DataGridView();
             this.col_MaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,26 +42,26 @@ namespace QuanLiSinhVien_Project3
             this.col_TongDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Xeploai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnDTB = new System.Windows.Forms.Button();
+            this.txtDiemC = new System.Windows.Forms.TextBox();
+            this.lblDiemmonC = new System.Windows.Forms.Label();
+            this.txtLop = new System.Windows.Forms.TextBox();
+            this.txtDiemB = new System.Windows.Forms.TextBox();
+            this.lblLop = new System.Windows.Forms.Label();
+            this.lblDiemmonB = new System.Windows.Forms.Label();
+            this.txtTSV = new System.Windows.Forms.TextBox();
+            this.txtDTB = new System.Windows.Forms.TextBox();
+            this.txtDiemA = new System.Windows.Forms.TextBox();
+            this.lblDiemTB = new System.Windows.Forms.Label();
+            this.lblTenSv = new System.Windows.Forms.Label();
+            this.lblDiemmonA = new System.Windows.Forms.Label();
+            this.txtMSV = new System.Windows.Forms.TextBox();
+            this.lblMSV = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQLD)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,13 +103,13 @@ namespace QuanLiSinhVien_Project3
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // dataGridViewQLD
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.SkyBlue;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewQLD.AllowUserToAddRows = false;
+            this.dataGridViewQLD.AllowUserToDeleteRows = false;
+            this.dataGridViewQLD.BackgroundColor = System.Drawing.Color.SkyBlue;
+            this.dataGridViewQLD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewQLD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_MaSV,
             this.col_TenSV,
             this.col_Lop,
@@ -118,16 +118,17 @@ namespace QuanLiSinhVien_Project3
             this.col_MonC,
             this.col_TongDiem,
             this.col_Xeploai});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 319);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(927, 415);
-            this.dataGridView1.TabIndex = 1;
+            this.dataGridViewQLD.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewQLD.Location = new System.Drawing.Point(0, 319);
+            this.dataGridViewQLD.Name = "dataGridViewQLD";
+            this.dataGridViewQLD.ReadOnly = true;
+            this.dataGridViewQLD.RowHeadersVisible = false;
+            this.dataGridViewQLD.RowHeadersWidth = 51;
+            this.dataGridViewQLD.RowTemplate.Height = 24;
+            this.dataGridViewQLD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewQLD.Size = new System.Drawing.Size(927, 415);
+            this.dataGridViewQLD.TabIndex = 1;
+            this.dataGridViewQLD.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewQLD_CellClick);
             // 
             // col_MaSV
             // 
@@ -195,214 +196,202 @@ namespace QuanLiSinhVien_Project3
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.textBox6);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.textBox5);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.textBox2);
-            this.panel2.Controls.Add(this.textBox7);
-            this.panel2.Controls.Add(this.textBox4);
-            this.panel2.Controls.Add(this.label8);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.textBox1);
-            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnSua);
+            this.panel2.Controls.Add(this.btnXoa);
+            this.panel2.Controls.Add(this.btnThem);
+            this.panel2.Controls.Add(this.btnDTB);
+            this.panel2.Controls.Add(this.txtDiemC);
+            this.panel2.Controls.Add(this.lblDiemmonC);
+            this.panel2.Controls.Add(this.txtLop);
+            this.panel2.Controls.Add(this.txtDiemB);
+            this.panel2.Controls.Add(this.lblLop);
+            this.panel2.Controls.Add(this.lblDiemmonB);
+            this.panel2.Controls.Add(this.txtTSV);
+            this.panel2.Controls.Add(this.txtDTB);
+            this.panel2.Controls.Add(this.txtDiemA);
+            this.panel2.Controls.Add(this.lblDiemTB);
+            this.panel2.Controls.Add(this.lblTenSv);
+            this.panel2.Controls.Add(this.lblDiemmonA);
+            this.panel2.Controls.Add(this.txtMSV);
+            this.panel2.Controls.Add(this.lblMSV);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 37);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(927, 282);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button4
+            // btnSua
             // 
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(1)))), ((int)(((byte)(171)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(0)))), ((int)(((byte)(227)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::QuanLiSinhVien_Project3.Properties.Resources.maintenance_32px;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(398, 216);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(129, 48);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Sửa";
-            this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSua.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(1)))), ((int)(((byte)(171)))));
+            this.btnSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(0)))), ((int)(((byte)(227)))));
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Image = global::QuanLiSinhVien_Project3.Properties.Resources.maintenance_32px;
+            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSua.Location = new System.Drawing.Point(398, 216);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(129, 48);
+            this.btnSua.TabIndex = 4;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // button3
+            // btnXoa
             // 
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::QuanLiSinhVien_Project3.Properties.Resources.remove_32px;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.Location = new System.Drawing.Point(253, 216);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(129, 48);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Xóa";
-            this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnXoa.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Image = global::QuanLiSinhVien_Project3.Properties.Resources.remove_32px;
+            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnXoa.Location = new System.Drawing.Point(253, 216);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(129, 48);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // button5
+            // btnThem
             // 
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(171)))), ((int)(((byte)(1)))));
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(171)))), ((int)(((byte)(1)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = global::QuanLiSinhVien_Project3.Properties.Resources.add_32px;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.Location = new System.Drawing.Point(109, 216);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(128, 48);
-            this.button5.TabIndex = 6;
-            this.button5.Text = "Nhập";
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(171)))), ((int)(((byte)(1)))));
+            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(171)))), ((int)(((byte)(1)))));
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Image = global::QuanLiSinhVien_Project3.Properties.Resources.add_32px;
+            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnThem.Location = new System.Drawing.Point(109, 216);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(128, 48);
+            this.btnThem.TabIndex = 6;
+            this.btnThem.Text = "Nhập";
+            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // button2
+            // btnDTB
             // 
-            this.button2.BackColor = System.Drawing.Color.SkyBlue;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(725, 112);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(166, 38);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Tính điểm Trung bình";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnDTB.BackColor = System.Drawing.Color.SkyBlue;
+            this.btnDTB.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
+            this.btnDTB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDTB.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnDTB.Location = new System.Drawing.Point(725, 112);
+            this.btnDTB.Name = "btnDTB";
+            this.btnDTB.Size = new System.Drawing.Size(166, 38);
+            this.btnDTB.TabIndex = 2;
+            this.btnDTB.Text = "Tính điểm Trung bình";
+            this.btnDTB.UseVisualStyleBackColor = false;
             // 
-            // textBox6
+            // txtDiemC
             // 
-            this.textBox6.Location = new System.Drawing.Point(388, 146);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(166, 22);
-            this.textBox6.TabIndex = 1;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDiemC.Location = new System.Drawing.Point(388, 146);
+            this.txtDiemC.Name = "txtDiemC";
+            this.txtDiemC.Size = new System.Drawing.Size(166, 22);
+            this.txtDiemC.TabIndex = 1;
             // 
-            // label7
+            // lblDiemmonC
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(298, 147);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 17);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "ĐIểm môn C";
-            this.label7.Click += new System.EventHandler(this.label2_Click);
+            this.lblDiemmonC.AutoSize = true;
+            this.lblDiemmonC.Location = new System.Drawing.Point(298, 147);
+            this.lblDiemmonC.Name = "lblDiemmonC";
+            this.lblDiemmonC.Size = new System.Drawing.Size(84, 17);
+            this.lblDiemmonC.TabIndex = 0;
+            this.lblDiemmonC.Text = "ĐIểm môn C";
             // 
-            // textBox3
+            // txtLop
             // 
-            this.textBox3.Location = new System.Drawing.Point(99, 146);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(166, 22);
-            this.textBox3.TabIndex = 1;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtLop.Location = new System.Drawing.Point(99, 146);
+            this.txtLop.Name = "txtLop";
+            this.txtLop.Size = new System.Drawing.Size(166, 22);
+            this.txtLop.TabIndex = 1;
             // 
-            // textBox5
+            // txtDiemB
             // 
-            this.textBox5.Location = new System.Drawing.Point(388, 109);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(166, 22);
-            this.textBox5.TabIndex = 1;
-            this.textBox5.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDiemB.Location = new System.Drawing.Point(388, 109);
+            this.txtDiemB.Name = "txtDiemB";
+            this.txtDiemB.Size = new System.Drawing.Size(166, 22);
+            this.txtDiemB.TabIndex = 1;
             // 
-            // label4
+            // lblLop
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 149);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 17);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Lớp";
-            this.label4.Click += new System.EventHandler(this.label2_Click);
+            this.lblLop.AutoSize = true;
+            this.lblLop.Location = new System.Drawing.Point(37, 149);
+            this.lblLop.Name = "lblLop";
+            this.lblLop.Size = new System.Drawing.Size(32, 17);
+            this.lblLop.TabIndex = 0;
+            this.lblLop.Text = "Lớp";
             // 
-            // label6
+            // lblDiemmonB
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(298, 110);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 17);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Điểm môn B";
-            this.label6.Click += new System.EventHandler(this.label2_Click);
+            this.lblDiemmonB.AutoSize = true;
+            this.lblDiemmonB.Location = new System.Drawing.Point(298, 110);
+            this.lblDiemmonB.Name = "lblDiemmonB";
+            this.lblDiemmonB.Size = new System.Drawing.Size(84, 17);
+            this.lblDiemmonB.TabIndex = 0;
+            this.lblDiemmonB.Text = "Điểm môn B";
             // 
-            // textBox2
+            // txtTSV
             // 
-            this.textBox2.Location = new System.Drawing.Point(99, 109);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(166, 22);
-            this.textBox2.TabIndex = 1;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtTSV.Location = new System.Drawing.Point(99, 109);
+            this.txtTSV.Name = "txtTSV";
+            this.txtTSV.Size = new System.Drawing.Size(166, 22);
+            this.txtTSV.TabIndex = 1;
             // 
-            // textBox7
+            // txtDTB
             // 
-            this.textBox7.Location = new System.Drawing.Point(725, 72);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(166, 22);
-            this.textBox7.TabIndex = 1;
-            this.textBox7.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDTB.Location = new System.Drawing.Point(725, 72);
+            this.txtDTB.Name = "txtDTB";
+            this.txtDTB.Size = new System.Drawing.Size(166, 22);
+            this.txtDTB.TabIndex = 1;
             // 
-            // textBox4
+            // txtDiemA
             // 
-            this.textBox4.Location = new System.Drawing.Point(388, 72);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(166, 22);
-            this.textBox4.TabIndex = 1;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtDiemA.Location = new System.Drawing.Point(388, 72);
+            this.txtDiemA.Name = "txtDiemA";
+            this.txtDiemA.Size = new System.Drawing.Size(166, 22);
+            this.txtDiemA.TabIndex = 1;
             // 
-            // label8
+            // lblDiemTB
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(585, 73);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(134, 17);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Trung bình các môn";
-            this.label8.Click += new System.EventHandler(this.label2_Click);
+            this.lblDiemTB.AutoSize = true;
+            this.lblDiemTB.Location = new System.Drawing.Point(585, 73);
+            this.lblDiemTB.Name = "lblDiemTB";
+            this.lblDiemTB.Size = new System.Drawing.Size(134, 17);
+            this.lblDiemTB.TabIndex = 0;
+            this.lblDiemTB.Text = "Trung bình các môn";
             // 
-            // label3
+            // lblTenSv
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 112);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Tên SV";
-            this.label3.Click += new System.EventHandler(this.label2_Click);
+            this.lblTenSv.AutoSize = true;
+            this.lblTenSv.Location = new System.Drawing.Point(37, 112);
+            this.lblTenSv.Name = "lblTenSv";
+            this.lblTenSv.Size = new System.Drawing.Size(55, 17);
+            this.lblTenSv.TabIndex = 0;
+            this.lblTenSv.Text = "Tên SV";
             // 
-            // label5
+            // lblDiemmonA
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(298, 73);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Điểm môn A";
-            this.label5.Click += new System.EventHandler(this.label2_Click);
+            this.lblDiemmonA.AutoSize = true;
+            this.lblDiemmonA.Location = new System.Drawing.Point(298, 73);
+            this.lblDiemmonA.Name = "lblDiemmonA";
+            this.lblDiemmonA.Size = new System.Drawing.Size(84, 17);
+            this.lblDiemmonA.TabIndex = 0;
+            this.lblDiemmonA.Text = "Điểm môn A";
             // 
-            // textBox1
+            // txtMSV
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtMSV.Location = new System.Drawing.Point(99, 72);
+            this.txtMSV.Name = "txtMSV";
+            this.txtMSV.Size = new System.Drawing.Size(166, 22);
+            this.txtMSV.TabIndex = 1;
             // 
-            // label2
+            // lblMSV
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 75);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 17);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "MSV";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblMSV.AutoSize = true;
+            this.lblMSV.Location = new System.Drawing.Point(37, 75);
+            this.lblMSV.Name = "lblMSV";
+            this.lblMSV.Size = new System.Drawing.Size(37, 17);
+            this.lblMSV.TabIndex = 0;
+            this.lblMSV.Text = "MSV";
             // 
             // Frm_QuanLyDiemSV
             // 
@@ -410,13 +399,13 @@ namespace QuanLiSinhVien_Project3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(927, 734);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewQLD);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_QuanLyDiemSV";
             this.Text = "Frm_QuanLyDiemSV";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewQLD)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -427,27 +416,27 @@ namespace QuanLiSinhVien_Project3
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewQLD;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label lblMSV;
+        private System.Windows.Forms.TextBox txtMSV;
+        private System.Windows.Forms.TextBox txtDiemC;
+        private System.Windows.Forms.Label lblDiemmonC;
+        private System.Windows.Forms.TextBox txtLop;
+        private System.Windows.Forms.TextBox txtDiemB;
+        private System.Windows.Forms.Label lblLop;
+        private System.Windows.Forms.Label lblDiemmonB;
+        private System.Windows.Forms.TextBox txtTSV;
+        private System.Windows.Forms.TextBox txtDiemA;
+        private System.Windows.Forms.Label lblTenSv;
+        private System.Windows.Forms.Label lblDiemmonA;
+        private System.Windows.Forms.Button btnDTB;
+        private System.Windows.Forms.TextBox txtDTB;
+        private System.Windows.Forms.Label lblDiemTB;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenSV;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Lop;

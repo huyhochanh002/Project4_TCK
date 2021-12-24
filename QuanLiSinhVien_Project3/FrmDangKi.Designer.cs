@@ -59,10 +59,9 @@ namespace QuanLiSinhVien_Project3
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.SkyBlue;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(263, 11);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(351, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 24);
+            this.label1.Size = new System.Drawing.Size(189, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách Lớp";
             // 
@@ -87,16 +86,17 @@ namespace QuanLiSinhVien_Project3
             this.col_Diem});
             this.dgvData.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvData.GridColor = System.Drawing.Color.DeepSkyBlue;
-            this.dgvData.Location = new System.Drawing.Point(0, 71);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvData.Location = new System.Drawing.Point(0, 88);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(741, 369);
+            this.dgvData.Size = new System.Drawing.Size(988, 454);
             this.dgvData.TabIndex = 22;
+            this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
             // col_MaSV
             // 
@@ -207,19 +207,19 @@ namespace QuanLiSinhVien_Project3
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.lop);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 118);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 145);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 72);
+            this.panel1.Size = new System.Drawing.Size(988, 89);
             this.panel1.TabIndex = 23;
             // 
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(494, 12);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Location = new System.Drawing.Point(659, 15);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(114, 46);
+            this.button4.Size = new System.Drawing.Size(152, 57);
             this.button4.TabIndex = 4;
             this.button4.Text = "SV Không Có Lớp";
             this.button4.UseVisualStyleBackColor = true;
@@ -228,10 +228,10 @@ namespace QuanLiSinhVien_Project3
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(613, 12);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Location = new System.Drawing.Point(817, 15);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(119, 46);
+            this.button3.Size = new System.Drawing.Size(159, 57);
             this.button3.TabIndex = 3;
             this.button3.Text = "Xuất Excel";
             this.button3.UseVisualStyleBackColor = true;
@@ -241,10 +241,10 @@ namespace QuanLiSinhVien_Project3
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::QuanLiSinhVien_Project3.Properties.Resources.search_32px;
-            this.button2.Location = new System.Drawing.Point(404, 12);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(539, 15);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 46);
+            this.button2.Size = new System.Drawing.Size(115, 57);
             this.button2.TabIndex = 2;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -252,20 +252,19 @@ namespace QuanLiSinhVien_Project3
             // lop
             // 
             this.lop.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lop.Location = new System.Drawing.Point(138, 24);
-            this.lop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lop.Location = new System.Drawing.Point(184, 30);
+            this.lop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lop.Name = "lop";
-            this.lop.Size = new System.Drawing.Size(253, 28);
+            this.lop.Size = new System.Drawing.Size(336, 34);
             this.lop.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(31, 24);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(41, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 24);
+            this.label2.Size = new System.Drawing.Size(114, 29);
             this.label2.TabIndex = 0;
             this.label2.Text = "Tìm Lớp :";
             // 
@@ -275,26 +274,26 @@ namespace QuanLiSinhVien_Project3
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.Image = global::QuanLiSinhVien_Project3.Properties.Resources.no_32px;
-            this.button1.Location = new System.Drawing.Point(694, 7);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(925, 9);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 38);
+            this.button1.Size = new System.Drawing.Size(51, 47);
             this.button1.TabIndex = 21;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // timLop
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(741, 440);
+            this.ClientSize = new System.Drawing.Size(988, 542);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "timLop";
             this.Text = "FrmDangKi";
             this.Load += new System.EventHandler(this.FrmDangKi_Load);

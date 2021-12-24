@@ -115,5 +115,10 @@ namespace QuanLiSinhVien_Project3
         {
             Loaddata();
         }
+
+        private void kiemSinhvVienNghi1_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

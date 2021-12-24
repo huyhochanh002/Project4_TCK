@@ -90,5 +90,10 @@ namespace QuanLiSinhVien_Project3
                 }
             }
         }
+
+        private void dgvData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
