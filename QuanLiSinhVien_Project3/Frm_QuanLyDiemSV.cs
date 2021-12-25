@@ -155,6 +155,11 @@ namespace QuanLiSinhVien_Project3
             Loaddata();
         }
 
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
         //private void btnex_Click(object sender, EventArgs e)
         //{
