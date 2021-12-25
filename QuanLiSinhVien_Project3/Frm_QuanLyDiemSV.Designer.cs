@@ -33,15 +33,12 @@ namespace QuanLiSinhVien_Project3
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnLammoi = new System.Windows.Forms.Button();
             this.btnex = new System.Windows.Forms.Button();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.btnDTB = new System.Windows.Forms.Button();
             this.txtDTB = new System.Windows.Forms.TextBox();
             this.lblDiemTB = new System.Windows.Forms.Label();
             this.dataGridViewQLD = new System.Windows.Forms.DataGridView();
-            this.btnLammoi = new System.Windows.Forms.Button();
             this.colID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coldiachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coldiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,8 +62,9 @@ namespace QuanLiSinhVien_Project3
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1490, 40);
+            this.panel1.Size = new System.Drawing.Size(1118, 32);
             this.panel1.TabIndex = 0;
             // 
             // label1
@@ -74,9 +72,10 @@ namespace QuanLiSinhVien_Project3
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(276, 0);
+            this.label1.Location = new System.Drawing.Point(207, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(909, 40);
+            this.label1.Size = new System.Drawing.Size(682, 32);
             this.label1.TabIndex = 2;
             this.label1.Text = "Quản lý điểm Sinh Viên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -91,85 +90,51 @@ namespace QuanLiSinhVien_Project3
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
             this.button1.Image = global::QuanLiSinhVien_Project3.Properties.Resources.no_32px;
             this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 40);
+            this.button1.Size = new System.Drawing.Size(38, 32);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.Controls.Add(this.btnLammoi);
             this.panel2.Controls.Add(this.btnex);
-            this.panel2.Controls.Add(this.btnSua);
-            this.panel2.Controls.Add(this.btnXoa);
-            this.panel2.Controls.Add(this.btnThem);
             this.panel2.Controls.Add(this.btnDTB);
             this.panel2.Controls.Add(this.txtDTB);
             this.panel2.Controls.Add(this.lblDiemTB);
-            this.panel2.Location = new System.Drawing.Point(0, 46);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 32);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1626, 252);
+            this.panel2.Size = new System.Drawing.Size(1118, 564);
             this.panel2.TabIndex = 2;
+            // 
+            // btnLammoi
+            // 
+            this.btnLammoi.AllowDrop = true;
+            this.btnLammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLammoi.Location = new System.Drawing.Point(641, 142);
+            this.btnLammoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLammoi.Name = "btnLammoi";
+            this.btnLammoi.Size = new System.Drawing.Size(124, 35);
+            this.btnLammoi.TabIndex = 8;
+            this.btnLammoi.Text = "Làm mới";
+            this.btnLammoi.UseVisualStyleBackColor = true;
+            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
             // 
             // btnex
             // 
             this.btnex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnex.Location = new System.Drawing.Point(596, 111);
+            this.btnex.Location = new System.Drawing.Point(503, 142);
+            this.btnex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnex.Name = "btnex";
-            this.btnex.Size = new System.Drawing.Size(166, 43);
+            this.btnex.Size = new System.Drawing.Size(124, 35);
             this.btnex.TabIndex = 7;
-            this.btnex.Text = "XuatExcel";
+            this.btnex.Text = "Xuất Excel";
             this.btnex.UseVisualStyleBackColor = true;
             this.btnex.Click += new System.EventHandler(this.btnex_Click);
-            // 
-            // btnSua
-            // 
-            this.btnSua.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(1)))), ((int)(((byte)(171)))));
-            this.btnSua.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(0)))), ((int)(((byte)(227)))));
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.Image = global::QuanLiSinhVien_Project3.Properties.Resources.maintenance_32px;
-            this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSua.Location = new System.Drawing.Point(416, 186);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(129, 48);
-            this.btnSua.TabIndex = 4;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnSua.UseVisualStyleBackColor = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.btnXoa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.Image = global::QuanLiSinhVien_Project3.Properties.Resources.remove_32px;
-            this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnXoa.Location = new System.Drawing.Point(267, 186);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(129, 48);
-            this.btnXoa.TabIndex = 5;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // btnThem
-            // 
-            this.btnThem.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(171)))), ((int)(((byte)(1)))));
-            this.btnThem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(171)))), ((int)(((byte)(1)))));
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Image = global::QuanLiSinhVien_Project3.Properties.Resources.add_32px;
-            this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnThem.Location = new System.Drawing.Point(119, 186);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(128, 48);
-            this.btnThem.TabIndex = 6;
-            this.btnThem.Text = "Nhập";
-            this.btnThem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnThem.UseVisualStyleBackColor = true;
             // 
             // btnDTB
             // 
@@ -178,20 +143,22 @@ namespace QuanLiSinhVien_Project3
             this.btnDTB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDTB.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDTB.Location = new System.Drawing.Point(704, 31);
+            this.btnDTB.Location = new System.Drawing.Point(533, 90);
+            this.btnDTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDTB.Name = "btnDTB";
-            this.btnDTB.Size = new System.Drawing.Size(280, 42);
+            this.btnDTB.Size = new System.Drawing.Size(210, 34);
             this.btnDTB.TabIndex = 2;
-            this.btnDTB.Text = "Tính điểm Trung bình";
+            this.btnDTB.Text = "Lọc điểm thấp hơn ";
             this.btnDTB.UseVisualStyleBackColor = false;
             this.btnDTB.Click += new System.EventHandler(this.btnDTB_Click);
             // 
             // txtDTB
             // 
             this.txtDTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDTB.Location = new System.Drawing.Point(397, 42);
+            this.txtDTB.Location = new System.Drawing.Point(323, 96);
+            this.txtDTB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDTB.Name = "txtDTB";
-            this.txtDTB.Size = new System.Drawing.Size(250, 27);
+            this.txtDTB.Size = new System.Drawing.Size(188, 23);
             this.txtDTB.TabIndex = 1;
             this.txtDTB.TextChanged += new System.EventHandler(this.txtDTB_TextChanged);
             // 
@@ -199,11 +166,12 @@ namespace QuanLiSinhVien_Project3
             // 
             this.lblDiemTB.AutoSize = true;
             this.lblDiemTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiemTB.Location = new System.Drawing.Point(103, 38);
+            this.lblDiemTB.Location = new System.Drawing.Point(167, 95);
+            this.lblDiemTB.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiemTB.Name = "lblDiemTB";
-            this.lblDiemTB.Size = new System.Drawing.Size(225, 29);
+            this.lblDiemTB.Size = new System.Drawing.Size(141, 24);
             this.lblDiemTB.TabIndex = 0;
-            this.lblDiemTB.Text = "Trung bình các môn";
+            this.lblDiemTB.Text = "Nhập Điểm Lọc";
             // 
             // dataGridViewQLD
             // 
@@ -227,26 +195,13 @@ namespace QuanLiSinhVien_Project3
             this.colLOP,
             this.colHDT,
             this.colTT});
-            this.dataGridViewQLD.Location = new System.Drawing.Point(0, 299);
-            this.dataGridViewQLD.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridViewQLD.Location = new System.Drawing.Point(0, 214);
             this.dataGridViewQLD.Name = "dataGridViewQLD";
             this.dataGridViewQLD.ReadOnly = true;
             this.dataGridViewQLD.RowHeadersWidth = 51;
             this.dataGridViewQLD.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewQLD.Size = new System.Drawing.Size(1490, 438);
+            this.dataGridViewQLD.Size = new System.Drawing.Size(1118, 385);
             this.dataGridViewQLD.TabIndex = 3;
-            // 
-            // btnLammoi
-            // 
-            this.btnLammoi.AllowDrop = true;
-            this.btnLammoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLammoi.Location = new System.Drawing.Point(931, 111);
-            this.btnLammoi.Name = "btnLammoi";
-            this.btnLammoi.Size = new System.Drawing.Size(166, 43);
-            this.btnLammoi.TabIndex = 8;
-            this.btnLammoi.Text = "Làm mới";
-            this.btnLammoi.UseVisualStyleBackColor = true;
-            this.btnLammoi.Click += new System.EventHandler(this.btnLammoi_Click);
             // 
             // colID
             // 
@@ -339,13 +294,14 @@ namespace QuanLiSinhVien_Project3
             // 
             // Frm_QuanLyDiemSV
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1490, 734);
+            this.ClientSize = new System.Drawing.Size(1118, 596);
             this.Controls.Add(this.dataGridViewQLD);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Frm_QuanLyDiemSV";
             this.Text = "Frm_QuanLyDiemSV";
             this.Load += new System.EventHandler(this.Frm_QuanLyDiemSV_Load_1);
@@ -366,9 +322,6 @@ namespace QuanLiSinhVien_Project3
         private System.Windows.Forms.Button btnDTB;
         private System.Windows.Forms.TextBox txtDTB;
         private System.Windows.Forms.Label lblDiemTB;
-        private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Button btnXoa;
-        private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnex;
         private System.Windows.Forms.DataGridView dataGridViewQLD;
         private System.Windows.Forms.Button btnLammoi;
