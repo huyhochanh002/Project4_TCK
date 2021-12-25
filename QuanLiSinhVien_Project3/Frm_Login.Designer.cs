@@ -62,7 +62,7 @@ namespace QuanLiSinhVien_Project3
             this.lblUserName.Location = new System.Drawing.Point(50, 214);
             this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(75, 17);
+            this.lblUserName.Size = new System.Drawing.Size(89, 20);
             this.lblUserName.TabIndex = 1;
             this.lblUserName.Text = "UserName";
             // 
@@ -73,7 +73,7 @@ namespace QuanLiSinhVien_Project3
             this.lblPassWord.Location = new System.Drawing.Point(52, 278);
             this.lblPassWord.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPassWord.Name = "lblPassWord";
-            this.lblPassWord.Size = new System.Drawing.Size(73, 17);
+            this.lblPassWord.Size = new System.Drawing.Size(87, 20);
             this.lblPassWord.TabIndex = 2;
             this.lblPassWord.Text = "PassWord";
             // 
@@ -82,7 +82,7 @@ namespace QuanLiSinhVien_Project3
             this.txtUserName.Location = new System.Drawing.Point(228, 214);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(306, 23);
+            this.txtUserName.Size = new System.Drawing.Size(306, 27);
             this.txtUserName.TabIndex = 1;
             this.ToolTipUserName.SetToolTip(this.txtUserName, "Nhập UserName để đăng nhập!");
             this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
@@ -93,7 +93,7 @@ namespace QuanLiSinhVien_Project3
             this.txtPassWord.Location = new System.Drawing.Point(228, 278);
             this.txtPassWord.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassWord.Name = "txtPassWord";
-            this.txtPassWord.Size = new System.Drawing.Size(306, 23);
+            this.txtPassWord.Size = new System.Drawing.Size(306, 27);
             this.txtPassWord.TabIndex = 2;
             this.ToolTipPassWord.SetToolTip(this.txtPassWord, "Nhập PassWord để đăng nhập!");
             this.txtPassWord.Leave += new System.EventHandler(this.txtPassWord_Leave);
@@ -129,10 +129,11 @@ namespace QuanLiSinhVien_Project3
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(542, 210);
             this.label1.TabIndex = 5;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // Frm_Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(708, 434);

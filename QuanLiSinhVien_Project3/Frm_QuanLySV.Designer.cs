@@ -33,6 +33,17 @@ namespace QuanLiSinhVien_Project3
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvData = new System.Windows.Forms.DataGridView();
+            this.col_MaSV = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.col_TenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Dienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Tennganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_He = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Tinhtrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_Diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtGioiTinh = new System.Windows.Forms.ComboBox();
             this.btnSua = new System.Windows.Forms.Button();
@@ -55,17 +66,6 @@ namespace QuanLiSinhVien_Project3
             this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.txtTenSV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.col_MaSV = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.col_TenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Ngaysinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Dienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Tennganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Lop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_He = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Tinhtrang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_Diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.panel2.SuspendLayout();
@@ -92,6 +92,7 @@ namespace QuanLiSinhVien_Project3
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản lý Sinh Viên";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -140,6 +141,107 @@ namespace QuanLiSinhVien_Project3
             this.dgvData.TabIndex = 4;
             this.dgvData.Click += new System.EventHandler(this.dgvData_Click);
             // 
+            // col_MaSV
+            // 
+            this.col_MaSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_MaSV.DataPropertyName = "Id";
+            this.col_MaSV.HeaderText = "MSV";
+            this.col_MaSV.MinimumWidth = 6;
+            this.col_MaSV.Name = "col_MaSV";
+            this.col_MaSV.ReadOnly = true;
+            this.col_MaSV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.col_MaSV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // col_TenSV
+            // 
+            this.col_TenSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_TenSV.DataPropertyName = "Ten";
+            this.col_TenSV.HeaderText = "Tên SV";
+            this.col_TenSV.MinimumWidth = 6;
+            this.col_TenSV.Name = "col_TenSV";
+            this.col_TenSV.ReadOnly = true;
+            // 
+            // col_Ngaysinh
+            // 
+            this.col_Ngaysinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_Ngaysinh.DataPropertyName = "Ngaysinh";
+            this.col_Ngaysinh.HeaderText = "Ngày sinh";
+            this.col_Ngaysinh.MinimumWidth = 6;
+            this.col_Ngaysinh.Name = "col_Ngaysinh";
+            this.col_Ngaysinh.ReadOnly = true;
+            // 
+            // col_Gioitinh
+            // 
+            this.col_Gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_Gioitinh.DataPropertyName = "Gioitinh";
+            this.col_Gioitinh.HeaderText = "Giới tính";
+            this.col_Gioitinh.MinimumWidth = 6;
+            this.col_Gioitinh.Name = "col_Gioitinh";
+            this.col_Gioitinh.ReadOnly = true;
+            // 
+            // col_Diachi
+            // 
+            this.col_Diachi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_Diachi.DataPropertyName = "Diachi";
+            this.col_Diachi.HeaderText = "Địa chỉ";
+            this.col_Diachi.MinimumWidth = 6;
+            this.col_Diachi.Name = "col_Diachi";
+            this.col_Diachi.ReadOnly = true;
+            // 
+            // col_Dienthoai
+            // 
+            this.col_Dienthoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_Dienthoai.DataPropertyName = "Sdt";
+            this.col_Dienthoai.HeaderText = "Điện thoại";
+            this.col_Dienthoai.MinimumWidth = 6;
+            this.col_Dienthoai.Name = "col_Dienthoai";
+            this.col_Dienthoai.ReadOnly = true;
+            // 
+            // col_Tennganh
+            // 
+            this.col_Tennganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_Tennganh.DataPropertyName = "Nghanghoc";
+            this.col_Tennganh.HeaderText = "Ngành học";
+            this.col_Tennganh.MinimumWidth = 6;
+            this.col_Tennganh.Name = "col_Tennganh";
+            this.col_Tennganh.ReadOnly = true;
+            // 
+            // col_Lop
+            // 
+            this.col_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_Lop.DataPropertyName = "Lop";
+            this.col_Lop.HeaderText = "Lớp";
+            this.col_Lop.MinimumWidth = 6;
+            this.col_Lop.Name = "col_Lop";
+            this.col_Lop.ReadOnly = true;
+            // 
+            // col_He
+            // 
+            this.col_He.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.col_He.DataPropertyName = "Hedaotao";
+            this.col_He.HeaderText = "Hệ đào tạo";
+            this.col_He.MinimumWidth = 6;
+            this.col_He.Name = "col_He";
+            this.col_He.ReadOnly = true;
+            // 
+            // col_Tinhtrang
+            // 
+            this.col_Tinhtrang.DataPropertyName = "Tinhtrang";
+            this.col_Tinhtrang.HeaderText = "Tình trạng";
+            this.col_Tinhtrang.MinimumWidth = 6;
+            this.col_Tinhtrang.Name = "col_Tinhtrang";
+            this.col_Tinhtrang.ReadOnly = true;
+            this.col_Tinhtrang.Width = 125;
+            // 
+            // col_Diem
+            // 
+            this.col_Diem.DataPropertyName = "Diem";
+            this.col_Diem.HeaderText = "Điểm";
+            this.col_Diem.MinimumWidth = 6;
+            this.col_Diem.Name = "col_Diem";
+            this.col_Diem.ReadOnly = true;
+            this.col_Diem.Width = 125;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.txtGioiTinh);
@@ -168,6 +270,7 @@ namespace QuanLiSinhVien_Project3
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1318, 320);
             this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // txtGioiTinh
             // 
@@ -389,107 +492,6 @@ namespace QuanLiSinhVien_Project3
             this.label2.Size = new System.Drawing.Size(133, 20);
             this.label2.TabIndex = 0;
             this.label2.Text = "Thông tin chi tiết";
-            // 
-            // col_MaSV
-            // 
-            this.col_MaSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_MaSV.DataPropertyName = "Id";
-            this.col_MaSV.HeaderText = "MSV";
-            this.col_MaSV.MinimumWidth = 6;
-            this.col_MaSV.Name = "col_MaSV";
-            this.col_MaSV.ReadOnly = true;
-            this.col_MaSV.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.col_MaSV.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // col_TenSV
-            // 
-            this.col_TenSV.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_TenSV.DataPropertyName = "Ten";
-            this.col_TenSV.HeaderText = "Tên SV";
-            this.col_TenSV.MinimumWidth = 6;
-            this.col_TenSV.Name = "col_TenSV";
-            this.col_TenSV.ReadOnly = true;
-            // 
-            // col_Ngaysinh
-            // 
-            this.col_Ngaysinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_Ngaysinh.DataPropertyName = "Ngaysinh";
-            this.col_Ngaysinh.HeaderText = "Ngày sinh";
-            this.col_Ngaysinh.MinimumWidth = 6;
-            this.col_Ngaysinh.Name = "col_Ngaysinh";
-            this.col_Ngaysinh.ReadOnly = true;
-            // 
-            // col_Gioitinh
-            // 
-            this.col_Gioitinh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_Gioitinh.DataPropertyName = "Gioitinh";
-            this.col_Gioitinh.HeaderText = "Giới tính";
-            this.col_Gioitinh.MinimumWidth = 6;
-            this.col_Gioitinh.Name = "col_Gioitinh";
-            this.col_Gioitinh.ReadOnly = true;
-            // 
-            // col_Diachi
-            // 
-            this.col_Diachi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_Diachi.DataPropertyName = "Diachi";
-            this.col_Diachi.HeaderText = "Địa chỉ";
-            this.col_Diachi.MinimumWidth = 6;
-            this.col_Diachi.Name = "col_Diachi";
-            this.col_Diachi.ReadOnly = true;
-            // 
-            // col_Dienthoai
-            // 
-            this.col_Dienthoai.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_Dienthoai.DataPropertyName = "Sdt";
-            this.col_Dienthoai.HeaderText = "Điện thoại";
-            this.col_Dienthoai.MinimumWidth = 6;
-            this.col_Dienthoai.Name = "col_Dienthoai";
-            this.col_Dienthoai.ReadOnly = true;
-            // 
-            // col_Tennganh
-            // 
-            this.col_Tennganh.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_Tennganh.DataPropertyName = "Nghanghoc";
-            this.col_Tennganh.HeaderText = "Ngành học";
-            this.col_Tennganh.MinimumWidth = 6;
-            this.col_Tennganh.Name = "col_Tennganh";
-            this.col_Tennganh.ReadOnly = true;
-            // 
-            // col_Lop
-            // 
-            this.col_Lop.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_Lop.DataPropertyName = "Lop";
-            this.col_Lop.HeaderText = "Lớp";
-            this.col_Lop.MinimumWidth = 6;
-            this.col_Lop.Name = "col_Lop";
-            this.col_Lop.ReadOnly = true;
-            // 
-            // col_He
-            // 
-            this.col_He.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.col_He.DataPropertyName = "Hedaotao";
-            this.col_He.HeaderText = "Hệ đào tạo";
-            this.col_He.MinimumWidth = 6;
-            this.col_He.Name = "col_He";
-            this.col_He.ReadOnly = true;
-            // 
-            // col_Tinhtrang
-            // 
-            this.col_Tinhtrang.DataPropertyName = "Tinhtrang";
-            this.col_Tinhtrang.HeaderText = "Tình trạng";
-            this.col_Tinhtrang.MinimumWidth = 6;
-            this.col_Tinhtrang.Name = "col_Tinhtrang";
-            this.col_Tinhtrang.ReadOnly = true;
-            this.col_Tinhtrang.Width = 125;
-            // 
-            // col_Diem
-            // 
-            this.col_Diem.DataPropertyName = "Diem";
-            this.col_Diem.HeaderText = "Điểm";
-            this.col_Diem.MinimumWidth = 6;
-            this.col_Diem.Name = "col_Diem";
-            this.col_Diem.ReadOnly = true;
-            this.col_Diem.Width = 125;
             // 
             // Frm_QuanLySV
             // 
