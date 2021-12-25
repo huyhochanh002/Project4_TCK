@@ -95,5 +95,10 @@ namespace QuanLiSinhVien_Project3
         {
 
         }
+
+        private void lop_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

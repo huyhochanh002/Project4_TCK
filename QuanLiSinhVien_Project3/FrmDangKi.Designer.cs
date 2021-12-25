@@ -64,11 +64,14 @@ namespace QuanLiSinhVien_Project3
             this.label1.Size = new System.Drawing.Size(189, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Danh Sách Lớp";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // dgvData
             // 
             this.dgvData.AllowUserToAddRows = false;
             this.dgvData.AllowUserToDeleteRows = false;
+            this.dgvData.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvData.BackgroundColor = System.Drawing.Color.SkyBlue;
             this.dgvData.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -84,9 +87,8 @@ namespace QuanLiSinhVien_Project3
             this.col_He,
             this.col_Tinhtrang,
             this.col_Diem});
-            this.dgvData.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvData.GridColor = System.Drawing.Color.DeepSkyBlue;
-            this.dgvData.Location = new System.Drawing.Point(0, 88);
+            this.dgvData.Location = new System.Drawing.Point(0, 156);
             this.dgvData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
@@ -94,7 +96,7 @@ namespace QuanLiSinhVien_Project3
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(988, 454);
+            this.dgvData.Size = new System.Drawing.Size(1300, 700);
             this.dgvData.TabIndex = 22;
             this.dgvData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvData_CellContentClick);
             // 
@@ -201,16 +203,19 @@ namespace QuanLiSinhVien_Project3
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.lop);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(0, 145);
+            this.panel1.Location = new System.Drawing.Point(0, 71);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(988, 89);
+            this.panel1.Size = new System.Drawing.Size(1186, 81);
             this.panel1.TabIndex = 23;
             // 
             // button4
@@ -257,6 +262,7 @@ namespace QuanLiSinhVien_Project3
             this.lop.Name = "lop";
             this.lop.Size = new System.Drawing.Size(336, 34);
             this.lop.TabIndex = 1;
+            this.lop.TextChanged += new System.EventHandler(this.lop_TextChanged);
             // 
             // label2
             // 
@@ -274,7 +280,7 @@ namespace QuanLiSinhVien_Project3
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.SkyBlue;
             this.button1.Image = global::QuanLiSinhVien_Project3.Properties.Resources.no_32px;
-            this.button1.Location = new System.Drawing.Point(925, 9);
+            this.button1.Location = new System.Drawing.Point(1002, 9);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(51, 47);
@@ -287,7 +293,7 @@ namespace QuanLiSinhVien_Project3
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(988, 542);
+            this.ClientSize = new System.Drawing.Size(1065, 542);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.button1);
