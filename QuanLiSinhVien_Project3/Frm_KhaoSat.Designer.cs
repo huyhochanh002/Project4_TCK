@@ -30,6 +30,7 @@ namespace QuanLiSinhVien_Project3
         private void InitializeComponent()
         {
             this.pnkhaosat_full = new System.Windows.Forms.Panel();
+            this.bth_refesh = new System.Windows.Forms.Button();
             this.btn_xuatexks = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@ namespace QuanLiSinhVien_Project3
             this.colTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kiemSinhvVienNghi1 = new QuanLiSinhVien_Project3.Usercontrol.KiemSinhvVienNghi();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.bth_refesh = new System.Windows.Forms.Button();
             this.pnkhaosat_full.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datasinhviendihoc)).BeginInit();
             this.SuspendLayout();
@@ -63,16 +63,30 @@ namespace QuanLiSinhVien_Project3
             this.pnkhaosat_full.Controls.Add(this.kiemSinhvVienNghi1);
             this.pnkhaosat_full.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnkhaosat_full.Location = new System.Drawing.Point(0, 0);
+            this.pnkhaosat_full.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnkhaosat_full.Name = "pnkhaosat_full";
-            this.pnkhaosat_full.Size = new System.Drawing.Size(800, 450);
+            this.pnkhaosat_full.Size = new System.Drawing.Size(1067, 554);
             this.pnkhaosat_full.TabIndex = 0;
+            // 
+            // bth_refesh
+            // 
+            this.bth_refesh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bth_refesh.Location = new System.Drawing.Point(855, 153);
+            this.bth_refesh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bth_refesh.Name = "bth_refesh";
+            this.bth_refesh.Size = new System.Drawing.Size(149, 54);
+            this.bth_refesh.TabIndex = 5;
+            this.bth_refesh.Text = "Làm Mới";
+            this.bth_refesh.UseVisualStyleBackColor = true;
+            this.bth_refesh.Click += new System.EventHandler(this.bth_refesh_Click);
             // 
             // btn_xuatexks
             // 
             this.btn_xuatexks.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_xuatexks.Location = new System.Drawing.Point(505, 124);
+            this.btn_xuatexks.Location = new System.Drawing.Point(673, 153);
+            this.btn_xuatexks.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_xuatexks.Name = "btn_xuatexks";
-            this.btn_xuatexks.Size = new System.Drawing.Size(120, 44);
+            this.btn_xuatexks.Size = new System.Drawing.Size(160, 54);
             this.btn_xuatexks.TabIndex = 4;
             this.btn_xuatexks.Text = "Xuất Excel";
             this.btn_xuatexks.UseVisualStyleBackColor = true;
@@ -83,9 +97,10 @@ namespace QuanLiSinhVien_Project3
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Cyan;
             this.button2.Image = global::QuanLiSinhVien_Project3.Properties.Resources.no_32px1;
-            this.button2.Location = new System.Drawing.Point(749, 12);
+            this.button2.Location = new System.Drawing.Point(999, 15);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(39, 39);
+            this.button2.Size = new System.Drawing.Size(52, 48);
             this.button2.TabIndex = 3;
             this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button2.UseVisualStyleBackColor = false;
@@ -94,9 +109,10 @@ namespace QuanLiSinhVien_Project3
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(261, 124);
+            this.button1.Location = new System.Drawing.Point(348, 153);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 44);
+            this.button1.Size = new System.Drawing.Size(263, 54);
             this.button1.TabIndex = 2;
             this.button1.Text = "Tìm Kiếm";
             this.button1.UseVisualStyleBackColor = true;
@@ -121,12 +137,13 @@ namespace QuanLiSinhVien_Project3
             this.colHDT,
             this.colTT});
             this.datasinhviendihoc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.datasinhviendihoc.Location = new System.Drawing.Point(0, 198);
+            this.datasinhviendihoc.Location = new System.Drawing.Point(0, 244);
+            this.datasinhviendihoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.datasinhviendihoc.Name = "datasinhviendihoc";
             this.datasinhviendihoc.ReadOnly = true;
             this.datasinhviendihoc.RowHeadersWidth = 51;
             this.datasinhviendihoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.datasinhviendihoc.Size = new System.Drawing.Size(800, 252);
+            this.datasinhviendihoc.Size = new System.Drawing.Size(1067, 310);
             this.datasinhviendihoc.TabIndex = 1;
             // 
             // colID
@@ -233,29 +250,20 @@ namespace QuanLiSinhVien_Project3
             this.kiemSinhvVienNghi1.BackColor = System.Drawing.Color.SkyBlue;
             this.kiemSinhvVienNghi1.Dock = System.Windows.Forms.DockStyle.Top;
             this.kiemSinhvVienNghi1.Location = new System.Drawing.Point(0, 0);
-            this.kiemSinhvVienNghi1.Margin = new System.Windows.Forms.Padding(4);
+            this.kiemSinhvVienNghi1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.kiemSinhvVienNghi1.Name = "kiemSinhvVienNghi1";
-            this.kiemSinhvVienNghi1.Size = new System.Drawing.Size(800, 198);
+            this.kiemSinhvVienNghi1.Size = new System.Drawing.Size(1067, 244);
             this.kiemSinhvVienNghi1.TabIndex = 0;
-            // 
-            // bth_refesh
-            // 
-            this.bth_refesh.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bth_refesh.Location = new System.Drawing.Point(641, 124);
-            this.bth_refesh.Name = "bth_refesh";
-            this.bth_refesh.Size = new System.Drawing.Size(112, 44);
-            this.bth_refesh.TabIndex = 5;
-            this.bth_refesh.Text = "Làm Mới";
-            this.bth_refesh.UseVisualStyleBackColor = true;
-            this.bth_refesh.Click += new System.EventHandler(this.bth_refesh_Click);
+            this.kiemSinhvVienNghi1.Load += new System.EventHandler(this.kiemSinhvVienNghi1_Load_1);
             // 
             // Frm_KhaoSat
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.pnkhaosat_full);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm_KhaoSat";
             this.Text = "Frm_KhaoSat";
             this.Load += new System.EventHandler(this.Frm_KhaoSat_Load);
