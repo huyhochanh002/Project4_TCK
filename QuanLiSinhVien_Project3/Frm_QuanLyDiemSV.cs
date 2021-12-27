@@ -125,7 +125,8 @@ namespace QuanLiSinhVien_Project3
             foreach (SinhVien.SinhVien item in KSsv.ListSV)
             {
                 int a = Convert.ToInt32(item.Diem);
-                if (a <= 4)
+                int b = Convert.ToInt32(txtDTB.Text);
+                if (a <= b)
                 {
                     listsv.Add(item);
                 }
