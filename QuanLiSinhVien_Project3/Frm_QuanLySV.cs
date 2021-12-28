@@ -183,6 +183,37 @@ namespace QuanLiSinhVien_Project3
         {
 
         }
+
+        private void boxtim_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void btn_tim_Click(object sender, EventArgs e)
+        {
+            long a = Convert.ToInt64(boxtim.Text);
+            int b = 0;
+            dgvData.ClearSelection();
+            foreach (SinhVien.SinhVien per in KSsv.ListSV)
+            { 
+                if (a == per.Id)
+                {
+                    dgvData.Rows[b].Selected = true;
+                    dgvData.FirstDisplayedScrollingRowIndex = b;
+                    b = 0;
+                    return;
+                }
+                b++;
+            }
+        }
     }
 }
 
