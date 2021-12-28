@@ -66,6 +66,9 @@ namespace QuanLiSinhVien_Project3
             this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.txtTenSV = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.boxtim = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_tim = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvData)).BeginInit();
             this.panel2.SuspendLayout();
@@ -78,7 +81,7 @@ namespace QuanLiSinhVien_Project3
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(988, 30);
             this.panel1.TabIndex = 2;
@@ -105,7 +108,7 @@ namespace QuanLiSinhVien_Project3
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::QuanLiSinhVien_Project3.Properties.Resources.no_32px;
             this.button1.Location = new System.Drawing.Point(945, 0);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(43, 30);
             this.button1.TabIndex = 0;
@@ -133,15 +136,15 @@ namespace QuanLiSinhVien_Project3
             this.col_Diem});
             this.dgvData.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvData.GridColor = System.Drawing.Color.DeepSkyBlue;
-            this.dgvData.Location = new System.Drawing.Point(0, 290);
-            this.dgvData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvData.Location = new System.Drawing.Point(0, 353);
+            this.dgvData.Margin = new System.Windows.Forms.Padding(2);
             this.dgvData.Name = "dgvData";
             this.dgvData.ReadOnly = true;
             this.dgvData.RowHeadersVisible = false;
             this.dgvData.RowHeadersWidth = 51;
             this.dgvData.RowTemplate.Height = 24;
             this.dgvData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvData.Size = new System.Drawing.Size(988, 369);
+            this.dgvData.Size = new System.Drawing.Size(988, 306);
             this.dgvData.TabIndex = 4;
             this.dgvData.Click += new System.EventHandler(this.dgvData_Click);
             // 
@@ -248,6 +251,9 @@ namespace QuanLiSinhVien_Project3
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.btn_tim);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.boxtim);
             this.panel2.Controls.Add(this.txtGioiTinh);
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.btnXoa);
@@ -271,9 +277,9 @@ namespace QuanLiSinhVien_Project3
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 30);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(988, 260);
+            this.panel2.Size = new System.Drawing.Size(988, 323);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -285,7 +291,7 @@ namespace QuanLiSinhVien_Project3
             "Nam",
             "Nữ"});
             this.txtGioiTinh.Location = new System.Drawing.Point(87, 126);
-            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGioiTinh.Margin = new System.Windows.Forms.Padding(2);
             this.txtGioiTinh.Name = "txtGioiTinh";
             this.txtGioiTinh.Size = new System.Drawing.Size(219, 28);
             this.txtGioiTinh.TabIndex = 5;
@@ -298,7 +304,7 @@ namespace QuanLiSinhVien_Project3
             this.btnSua.Image = global::QuanLiSinhVien_Project3.Properties.Resources.maintenance_32px;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnSua.Location = new System.Drawing.Point(777, 84);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(97, 39);
             this.btnSua.TabIndex = 3;
@@ -315,7 +321,7 @@ namespace QuanLiSinhVien_Project3
             this.btnXoa.Image = global::QuanLiSinhVien_Project3.Properties.Resources.remove_32px;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnXoa.Location = new System.Drawing.Point(777, 136);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(97, 39);
             this.btnXoa.TabIndex = 3;
@@ -333,7 +339,7 @@ namespace QuanLiSinhVien_Project3
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnClear.Location = new System.Drawing.Point(590, 214);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(62, 27);
             this.btnClear.TabIndex = 3;
@@ -350,7 +356,7 @@ namespace QuanLiSinhVien_Project3
             this.btnThem.Image = global::QuanLiSinhVien_Project3.Properties.Resources.add_32px;
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnThem.Location = new System.Drawing.Point(778, 37);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(96, 39);
             this.btnThem.TabIndex = 3;
@@ -443,7 +449,7 @@ namespace QuanLiSinhVien_Project3
             // 
             this.txtNganhhoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNganhhoc.Location = new System.Drawing.Point(434, 79);
-            this.txtNganhhoc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNganhhoc.Margin = new System.Windows.Forms.Padding(2);
             this.txtNganhhoc.Multiline = true;
             this.txtNganhhoc.Name = "txtNganhhoc";
             this.txtNganhhoc.Size = new System.Drawing.Size(219, 28);
@@ -453,7 +459,7 @@ namespace QuanLiSinhVien_Project3
             // 
             this.txtLop.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLop.Location = new System.Drawing.Point(434, 126);
-            this.txtLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLop.Margin = new System.Windows.Forms.Padding(2);
             this.txtLop.Multiline = true;
             this.txtLop.Name = "txtLop";
             this.txtLop.Size = new System.Drawing.Size(219, 28);
@@ -463,7 +469,7 @@ namespace QuanLiSinhVien_Project3
             // 
             this.txtHedaotao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHedaotao.Location = new System.Drawing.Point(434, 170);
-            this.txtHedaotao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHedaotao.Margin = new System.Windows.Forms.Padding(2);
             this.txtHedaotao.Multiline = true;
             this.txtHedaotao.Name = "txtHedaotao";
             this.txtHedaotao.Size = new System.Drawing.Size(219, 28);
@@ -473,7 +479,7 @@ namespace QuanLiSinhVien_Project3
             // 
             this.txtDienthoai.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDienthoai.Location = new System.Drawing.Point(434, 35);
-            this.txtDienthoai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDienthoai.Margin = new System.Windows.Forms.Padding(2);
             this.txtDienthoai.Multiline = true;
             this.txtDienthoai.Name = "txtDienthoai";
             this.txtDienthoai.Size = new System.Drawing.Size(219, 28);
@@ -483,7 +489,7 @@ namespace QuanLiSinhVien_Project3
             // 
             this.txtDiachi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiachi.Location = new System.Drawing.Point(87, 170);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiachi.Multiline = true;
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(219, 28);
@@ -493,7 +499,7 @@ namespace QuanLiSinhVien_Project3
             // 
             this.txtNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgaySinh.Location = new System.Drawing.Point(87, 81);
-            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(2);
             this.txtNgaySinh.Name = "txtNgaySinh";
             this.txtNgaySinh.Size = new System.Drawing.Size(219, 26);
             this.txtNgaySinh.TabIndex = 1;
@@ -502,7 +508,7 @@ namespace QuanLiSinhVien_Project3
             // 
             this.txtTenSV.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenSV.Location = new System.Drawing.Point(87, 35);
-            this.txtTenSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenSV.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenSV.Multiline = true;
             this.txtTenSV.Name = "txtTenSV";
             this.txtTenSV.Size = new System.Drawing.Size(219, 28);
@@ -519,6 +525,36 @@ namespace QuanLiSinhVien_Project3
             this.label2.TabIndex = 0;
             this.label2.Text = "Thông tin chi tiết";
             // 
+            // boxtim
+            // 
+            this.boxtim.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxtim.Location = new System.Drawing.Point(224, 263);
+            this.boxtim.Name = "boxtim";
+            this.boxtim.Size = new System.Drawing.Size(219, 29);
+            this.boxtim.TabIndex = 6;
+            this.boxtim.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.boxtim_KeyPress);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(155, 274);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 13);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "Tìm Kiếm ID";
+            // 
+            // btn_tim
+            // 
+            this.btn_tim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tim.Location = new System.Drawing.Point(449, 263);
+            this.btn_tim.Name = "btn_tim";
+            this.btn_tim.Size = new System.Drawing.Size(125, 29);
+            this.btn_tim.TabIndex = 8;
+            this.btn_tim.Text = "Tìm";
+            this.btn_tim.UseVisualStyleBackColor = true;
+            this.btn_tim.Click += new System.EventHandler(this.btn_tim_Click);
+            // 
             // Frm_QuanLySV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -528,7 +564,7 @@ namespace QuanLiSinhVien_Project3
             this.Controls.Add(this.dgvData);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Frm_QuanLySV";
             this.Text = "Frm_QuanLySV";
             this.Load += new System.EventHandler(this.Frm_QuanLySV_Load);
@@ -579,5 +615,8 @@ namespace QuanLiSinhVien_Project3
         private System.Windows.Forms.DataGridViewTextBoxColumn col_He;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Tinhtrang;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_Diem;
+        private System.Windows.Forms.Button btn_tim;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox boxtim;
     }
 }
