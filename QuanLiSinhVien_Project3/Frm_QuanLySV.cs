@@ -50,6 +50,16 @@ namespace QuanLiSinhVien_Project3
         {
             ks = new KSsv();
             Hienthi();
+            long max = KSsv.ListSV[0].Id;
+            for (int i = 0; i < KSsv.ListSV.Count; i++)
+            {
+                if (max < KSsv.ListSV[i].Id)
+                {
+                    max = KSsv.ListSV[i].Id;
+                }
+            }
+
+            txtMaSV.Text = (max + 1).ToString();
         }
 
         private void Hienthi()
@@ -78,7 +88,7 @@ namespace QuanLiSinhVien_Project3
                     Tinhtrang = Convert.ToInt32(dgvData.CurrentRow.Cells["col_Tinhtrang"].Value.ToString()),
                     Diem = Convert.ToInt32(dgvData.CurrentRow.Cells["col_Diem"].Value.ToString()),
                 };
-
+                txtMaSV.Text = dgvData.CurrentRow.Cells["col_MaSV"].Value.ToString();
                 txtTenSV.Text = dgvData.CurrentRow.Cells["col_TenSV"].Value.ToString();
                 txtNgaySinh.Text = dgvData.CurrentRow.Cells["col_Ngaysinh"].Value.ToString();
                 txtDiachi.Text = dgvData.CurrentRow.Cells["col_Diachi"].Value.ToString();
@@ -86,6 +96,8 @@ namespace QuanLiSinhVien_Project3
                 txtHedaotao.Text = dgvData.CurrentRow.Cells["col_He"].Value.ToString();
                 txtNganhhoc.Text = dgvData.CurrentRow.Cells["col_Tennganh"].Value.ToString();
                 txtLop.Text = dgvData.CurrentRow.Cells["col_Lop"].Value.ToString();
+                txtDiem.Text = dgvData.CurrentRow.Cells["col_Diem"].Value.ToString();
+                txtGioiTinh.Text = dgvData.CurrentRow.Cells["col_Gioitinh"].Value.ToString();
             }
         }
         private void btnXoa_Click(object sender, EventArgs e)
@@ -103,26 +115,6 @@ namespace QuanLiSinhVien_Project3
                 sinhVien = null;
                 GhiFile(KSsv.pathfile);
                 Hienthi();
-            }
-        }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            txtTenSV.Text = "";
-            txtNgaySinh.Text = "";
-            txtDiachi.Text = "";
-            txtDienthoai.Text = "";
-            txtHedaotao.Text = "";
-            txtNganhhoc.Text = "";
-            txtLop.Text = "";
-            Hienthi();
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(txtTenSV.Text))
-            {
-                SinhVien.SinhVien sinhvien = new SinhVien.SinhVien();
                 long max = KSsv.ListSV[0].Id;
                 for (int i = 0; i < KSsv.ListSV.Count; i++)
                 {
@@ -131,7 +123,48 @@ namespace QuanLiSinhVien_Project3
                         max = KSsv.ListSV[i].Id;
                     }
                 }
-                sinhvien.Id = max + 1;
+                txtMaSV.Text = (max+1).ToString();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtMaSV.Text = "";
+            txtTenSV.Text = "";
+            txtNgaySinh.Text = "";
+            txtDiachi.Text = "";
+            txtGioiTinh.Text = "";
+            txtDienthoai.Text = "";
+            txtHedaotao.Text = "";
+            txtNganhhoc.Text = "";
+            txtLop.Text = "";
+            txtDiem.Text = "";
+            Hienthi();
+            long max = KSsv.ListSV[0].Id;
+            for (int i = 0; i < KSsv.ListSV.Count; i++)
+            {
+                if (max < KSsv.ListSV[i].Id)
+                {
+                    max = KSsv.ListSV[i].Id;
+                }
+            }
+            txtMaSV.Text = (max + 1).ToString();
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtTenSV.Text))
+            {
+                SinhVien.SinhVien sinhvien = new SinhVien.SinhVien();
+                /*long max = KSsv.ListSV[0].Id;
+                for (int i = 0; i < KSsv.ListSV.Count; i++)
+                {
+                    if (max < KSsv.ListSV[i].Id)
+                    {
+                        max = KSsv.ListSV[i].Id;
+                    }
+                }*/
+                sinhvien.Id = Convert.ToInt64(txtMaSV.Text);
                 sinhvien.Ten = txtTenSV.Text;
                 sinhvien.Diachi = txtDiachi.Text;
                 sinhvien.Gioitinh = txtGioiTinh.Text;
@@ -140,6 +173,7 @@ namespace QuanLiSinhVien_Project3
                 sinhvien.Ngaysinh = txtNgaySinh.Text;
                 sinhvien.Nghanghoc = txtNganhhoc.Text;
                 sinhvien.Sdt = txtDienthoai.Text;
+                sinhvien.Diem = Convert.ToInt32(txtDiem.Text);
                 KSsv.ListSV.Add(sinhvien);
                 GhiFile(KSsv.pathfile);
                 Hienthi();
@@ -166,6 +200,7 @@ namespace QuanLiSinhVien_Project3
                         item.Ngaysinh = txtNgaySinh.Text;
                         item.Nghanghoc = txtNganhhoc.Text;
                         item.Sdt = txtDienthoai.Text;
+                        item.Diem = Convert.ToInt32(txtDiem.Text);
                     }
                 }
                 GhiFile(KSsv.pathfile);
@@ -173,7 +208,6 @@ namespace QuanLiSinhVien_Project3
                 Hienthi();
             }
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
