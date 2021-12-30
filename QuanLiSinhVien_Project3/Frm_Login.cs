@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -22,25 +23,21 @@ namespace QuanLiSinhVien_Project3
 
         }
 
-        private void dangnhap()
+        public void GhiFile(string path)
         {
-            if (txtUserName.Text.Length == 0 && txtPassWord.Text.Length == 0)
-                MessageBox.Show("Bạn chưa nhập PassWord!");
-            else
-                if (this.txtUserName.Text.Length == 0)
-                MessageBox.Show("Bạn chưa nhập UserName!");
-            else
-                if (this.txtPassWord.Text.Length == 0)
-                MessageBox.Show("Bạn chưa nhập PassWord!");
-            else
-                if (this.txtUserName.Text == "admin" && this.txtPassWord.Text == "admin")
+            using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.Write))
             {
-                MessageBox.Show("Đăng nhập thành công!");              
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    foreach (User.Usercf item in Userlist.ListUser)
+                    {
+                        sw.WriteLine(string.Format("{0},{1},{2}",
+                            item.Id, item.Pass, item.Question));
+                    }
+                }
             }
-            else
-                MessageBox.Show("User hoặc PassWord không đúng!");
-
         }
+        User.Usercf uscf;
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -82,11 +79,20 @@ namespace QuanLiSinhVien_Project3
         private void btnLogin_Click(object sender, EventArgs e)
         {
             GiaoDienChinh gdc = new GiaoDienChinh();
-            if(this.txtUserName.Text == "admin" && this.txtPassWord.Text == "admin")
+            if (txtUserName != null)
             {
-                gdc.Show();
+                foreach (User.Usercf item in Userlist.ListUser)
+                {
+                    if (item.Id == txtUserName.Text && txtPassWord.Text == item.Pass)
+                    {
+                        gdc.Show();
+                    }
+                }
             }
-            dangnhap();
+            else {
+                MessageBox.Show("Sai thông tin đăng nhập!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            GhiFile(Userlist.pathfile);
         }
 
         private void txtUserName_TextChanged(object sender, EventArgs e)
@@ -101,7 +107,14 @@ namespace QuanLiSinhVien_Project3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Frm_ChangePass cp = new Frm_ChangePass();
+            cp.Show();
+        }
 
+        private void btn_đk_Click(object sender, EventArgs e)
+        {
+            Frm_Register frg = new Frm_Register();
+            frg.Show();
         }
     }
 }

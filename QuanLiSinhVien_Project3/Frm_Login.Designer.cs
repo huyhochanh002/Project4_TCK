@@ -35,13 +35,13 @@ namespace QuanLiSinhVien_Project3
             this.lblPassWord = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassWord = new System.Windows.Forms.TextBox();
-            this.btnExit = new System.Windows.Forms.Button();
             this.ToolTipUserName = new System.Windows.Forms.ToolTip(this.components);
             this.ToolTipPassWord = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_đk = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,18 +102,6 @@ namespace QuanLiSinhVien_Project3
             this.ToolTipPassWord.SetToolTip(this.txtPassWord, "Nhập PassWord để đăng nhập!");
             this.txtPassWord.Leave += new System.EventHandler(this.txtPassWord_Leave);
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Aqua;
-            this.btnExit.Image = global::QuanLiSinhVien_Project3.Properties.Resources.no_32px;
-            this.btnExit.Location = new System.Drawing.Point(645, 13);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(46, 40);
-            this.btnExit.TabIndex = 4;
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // ToolTipUserName
             // 
             this.ToolTipUserName.AutomaticDelay = 100;
@@ -125,15 +113,6 @@ namespace QuanLiSinhVien_Project3
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // label1
-            // 
-            this.label1.Image = global::QuanLiSinhVien_Project3.Properties.Resources.login;
-            this.label1.Location = new System.Drawing.Point(34, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(542, 210);
-            this.label1.TabIndex = 5;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // button1
             // 
@@ -157,6 +136,28 @@ namespace QuanLiSinhVien_Project3
             this.btn_đk.TabIndex = 7;
             this.btn_đk.Text = "Đăng Kí";
             this.btn_đk.UseVisualStyleBackColor = false;
+            this.btn_đk.Click += new System.EventHandler(this.btn_đk_Click);
+            // 
+            // label1
+            // 
+            this.label1.Image = global::QuanLiSinhVien_Project3.Properties.Resources.login;
+            this.label1.Location = new System.Drawing.Point(34, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(542, 210);
+            this.label1.TabIndex = 5;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Aqua;
+            this.btnExit.Image = global::QuanLiSinhVien_Project3.Properties.Resources.no_32px;
+            this.btnExit.Location = new System.Drawing.Point(645, 13);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(46, 40);
+            this.btnExit.TabIndex = 4;
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // Frm_Login
             // 
