@@ -32,8 +32,8 @@ namespace QuanLiSinhVien_Project3
                 {
                     foreach (User.Usercf item in Userlist.ListUser)
                     {
-                        sw.WriteLine(string.Format("{0},{1},{2}",
-                            item.Id, item.Pass, item.Question));
+                        sw.WriteLine(string.Format("{0},{1},{2},{3}",
+                            item.Id, item.Username, item.Pass, item.Question));
                     }
                 }
             }
@@ -43,50 +43,53 @@ namespace QuanLiSinhVien_Project3
         {
 
         }
-
+        public static long timmax()
+        {
+            long max = 0;
+            foreach (User.Usercf item in Userlist.ListUser)
+            {
+                if (max < item.Id)
+                {
+                    max = item.Id;
+                }
+            }
+            return max;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txt_tentk != null)
+            if (!string.IsNullOrEmpty(txt_tentk.Text))
             {
                 foreach (User.Usercf item in Userlist.ListUser)
                 {
-                    if (txt_tentk.Text == item.Id && txt_mkcu.Text == item.Pass)
+                    if (txt_tentk.Text == item.Username && txt_mkcu.Text == item.Pass)
                     {
-                        item.Id = txt_tentk.Text;
+                        item.Id = item.Id;
+                        item.Username = txt_tentk.Text;
                         item.Pass = txt_mkmoi.Text;
                         item.Question = txt_cauhoibimat.Text;
+                        GhiFile(Userlist.pathfile);
+                        txt_tentk.Text = null;
+                        Userlist userl = new Userlist();
+                        userl.GetUser(Userlist.pathfile);
+                        MessageBox.Show("Đổi mật khẩu thành công!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;           
                     }
                 }
-                GhiFile(Userlist.pathfile);
-                txt_tentk = null;
+                MessageBox.Show("Kiểm tra lại", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            else {
-                MessageBox.Show("Đổi mật khẩu thành công!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                MessageBox.Show("Không bỏ trống", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (txt_tentk != null)
-                foreach (User.Usercf item in Userlist.ListUser)
-                {
-                    if (txt_tentk.Text != item.Id)
-                    {
-                        MessageBox.Show("Sai tài khoản!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
+
         }
 
         private void txt_mkcu_TextChanged(object sender, EventArgs e)
         {
-            if (txt_mkcu != null)
-                foreach (User.Usercf item in Userlist.ListUser)
-                {
-                    if (txt_mkcu.Text != item.Pass)
-                    {
-                        MessageBox.Show("Sai mật khẩu!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-                }
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -98,10 +101,6 @@ namespace QuanLiSinhVien_Project3
 
         private void txt_mkmoixacnhan_TextChanged(object sender, EventArgs e)
         {
-            if (txt_mkmoi != txt_mkmoixacnhan)
-            {
-                MessageBox.Show("Xác nhận mật khẩu không đúng", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -111,19 +110,20 @@ namespace QuanLiSinhVien_Project3
         private void btn_hienthich_Click(object sender, EventArgs e)
         {
             if (textBox2 != null)
+            {
+                int kiemtra = 0;
                 foreach (User.Usercf item in Userlist.ListUser)
                 {
-                    if (txt_mkcu.Text != item.Id)
+                    if (textBox2.Text == item.Username)
                     {
-                        MessageBox.Show("Không tìm thấy tài khoản!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        textBox1.Text = item.Question;
                     }
                 }
-            else{
-                foreach (User.Usercf item in Userlist.ListUser)
-                {
-                    textBox1.Text = item.Question;
-                }
+            }
+            else
+            {
+                MessageBox.Show("Kiểm tra lại không đúng", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
- }
+}

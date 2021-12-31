@@ -17,10 +17,10 @@ namespace QuanLiSinhVien_Project3
         {
             InitializeComponent();
         }
-
+        Userlist userl = new Userlist();
         private void Frm_Login_Load(object sender, EventArgs e)
         {
-
+            userl.GetUser(Userlist.pathfile);
         }
 
         public void GhiFile(string path)
@@ -31,8 +31,8 @@ namespace QuanLiSinhVien_Project3
                 {
                     foreach (User.Usercf item in Userlist.ListUser)
                     {
-                        sw.WriteLine(string.Format("{0},{1},{2}",
-                            item.Id, item.Pass, item.Question));
+                        sw.WriteLine(string.Format("{0},{1},{2},{3}",
+                            item.Id,item.Username,item.Pass, item.Question));
                     }
                 }
             }
@@ -83,9 +83,9 @@ namespace QuanLiSinhVien_Project3
             {
                 foreach (User.Usercf item in Userlist.ListUser)
                 {
-                    if (item.Id == txtUserName.Text && txtPassWord.Text == item.Pass)
+                    if (item.Username == txtUserName.Text && txtPassWord.Text == item.Pass)
                     {
-                        gdc.Show();
+                        gdc.ShowDialog();
                     }
                 }
             }

@@ -30,8 +30,8 @@ namespace QuanLiSinhVien_Project3
                 {
                     foreach (User.Usercf item in Userlist.ListUser)
                     {
-                        sw.WriteLine(string.Format("{0},{1},{2}",
-                            item.Id, item.Pass, item.Question));
+                        sw.WriteLine(string.Format("{0},{1},{2},{3}",
+                            item.Id, item.Username, item.Pass, item.Question));
                     }
                 }
             }
@@ -39,28 +39,44 @@ namespace QuanLiSinhVien_Project3
 
         private void btn_DoiMK_Click(object sender, EventArgs e)
         {
-            if (txt_tentk == null || txt_mkmoi == null || txt_mkmoixacnhan == null || txt_cauhoibimat == null)
+            int kiemtra = 0;
+            foreach (User.Usercf item in Userlist.ListUser)
+            {
+                if (item.Username == txt_tentk.Text)
+                {
+                    kiemtra++;
+                }
+            }
+            if (txt_mkmoi.Text != txt_mkmoixacnhan.Text||kiemtra>0)
+            {
+                MessageBox.Show("Xác nhận mật khẩu không đúng hoặc trùng tài khoản ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (txt_tentk != null && txt_mkmoi != null && txt_mkmoixacnhan != null && txt_cauhoibimat != null)
             {
                 User.Usercf usc = new User.Usercf();
-                usc.Id = txt_tentk.Text;
+                usc.Id = Frm_ChangePass.timmax()+1;
+                usc.Username = txt_tentk.Text;
                 usc.Pass = txt_mkmoi.Text;
                 usc.Question = txt_cauhoibimat.Text;
                 Userlist.ListUser.Add(usc);
                 GhiFile(Userlist.pathfile);
                 MessageBox.Show("Tạo tài khoảng thành công", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Userlist userl = new Userlist();
+                userl.GetUser(Userlist.pathfile);
+                kiemtra = 0;
+                this.Close();
             }
             else
             {
 
                 MessageBox.Show("Yêu cầu nhập đủ thông tin", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
         }
 
         private void txt_mkmoixacnhan_TextChanged(object sender, EventArgs e)
         {
-            if (txt_mkmoi != txt_mkmoixacnhan) {
-                MessageBox.Show("Xác nhận mật khẩu không đúng", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
+
         }
     }
 }

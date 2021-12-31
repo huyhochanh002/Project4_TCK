@@ -26,9 +26,10 @@ namespace QuanLiSinhVien_Project3
                         {
                             string[] svarray = line.Split(',');
                             User.Usercf us = new User.Usercf();
-                            us.Id = svarray[0];
-                            us.Pass = svarray[1];
-                            us.Question = svarray[2];
+                            us.Id = Convert.ToInt64(svarray[0]);
+                            us.Username = svarray[1];
+                            us.Pass = svarray[2];
+                            us.Question = svarray[3];
                             ListUser.Add(us);
                         }
                     }
