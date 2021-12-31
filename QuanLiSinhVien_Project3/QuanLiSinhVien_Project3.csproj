@@ -81,6 +81,12 @@
     <Compile Include="Frm_Calender.Designer.cs">
       <DependentUpon>Frm_Calender.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_ChangePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_ChangePass.Designer.cs">
+      <DependentUpon>Frm_ChangePass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_KhaoSat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     <Compile Include="Frm_QuanLySV.Designer.cs">
       <DependentUpon>Frm_QuanLySV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Register.Designer.cs">
+      <DependentUpon>Frm_Register.cs</DependentUpon>
+    </Compile>
     <Compile Include="GiaoDienChinh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,12 +133,17 @@
     <Compile Include="Usercontrol\KiemSinhvVienNghi.Designer.cs">
       <DependentUpon>KiemSinhvVienNghi.cs</DependentUpon>
     </Compile>
+    <Compile Include="User\Usercf.cs" />
+    <Compile Include="Userlist.cs" />
     <Compile Include="XuatFileEX.cs" />
     <EmbeddedResource Include="FrmDangKi.resx">
       <DependentUpon>FrmDangKi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Calender.resx">
       <DependentUpon>Frm_Calender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_ChangePass.resx">
+      <DependentUpon>Frm_ChangePass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_KhaoSat.resx">
       <DependentUpon>Frm_KhaoSat.cs</DependentUpon>
@@ -139,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_QuanLySV.resx">
       <DependentUpon>Frm_QuanLySV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Register.resx">
+      <DependentUpon>Frm_Register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoDienChinh.resx">
       <DependentUpon>GiaoDienChinh.cs</DependentUpon>
@@ -209,5 +229,6 @@
     <None Include="Anh\login.png" />
     <Content Include="DevComponents.DotNetBar2.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
