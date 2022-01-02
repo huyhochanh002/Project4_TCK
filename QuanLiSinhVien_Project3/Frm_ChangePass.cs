@@ -63,16 +63,23 @@ namespace QuanLiSinhVien_Project3
                 {
                     if (txt_tentk.Text == item.Username && txt_mkcu.Text == item.Pass)
                     {
-                        item.Id = item.Id;
-                        item.Username = txt_tentk.Text;
-                        item.Pass = txt_mkmoi.Text;
-                        item.Question = txt_cauhoibimat.Text;
-                        GhiFile(Userlist.pathfile);
-                        txt_tentk.Text = null;
-                        Userlist userl = new Userlist();
-                        userl.GetUser(Userlist.pathfile);
-                        MessageBox.Show("Đổi mật khẩu thành công!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;           
+                        if (txt_mkmoi.Text == txt_mkmoixacnhan.Text)
+                        {
+                            item.Id = item.Id;
+                            item.Username = txt_tentk.Text;
+                            item.Pass = txt_mkmoi.Text;
+                            item.Question = txt_cauhoibimat.Text;
+                            GhiFile(Userlist.pathfile);
+                            txt_tentk.Text = "";
+                            txt_mkmoi.Text = "";
+                            txt_mkmoixacnhan.Text = "";
+                            txt_cauhoibimat.Text = "";
+                            txt_mkcu.Text = "";
+                            Userlist userl = new Userlist();
+                            userl.GetUser(Userlist.pathfile);
+                            MessageBox.Show("Đổi mật khẩu thành công!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
                     }
                 }
                 MessageBox.Show("Kiểm tra lại", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
