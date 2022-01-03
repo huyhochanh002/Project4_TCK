@@ -124,21 +124,22 @@ namespace QuanLiSinhVien_Project3
         private void btnLichhoc_Click(object sender, EventArgs e)
         {
             this.trangThai = true;
-            this.tentabmo = "Lịch học cho sinh viên";
+            this.tentabmo = "Dăng Kí Tài Khoản Admin";
             if (!Kiemtramotab(tentabmo))
             {
                 TabItem t = tabcontrol_center.CreateTab(tentabmo);
                 t.Name = "Frm_Calendar";
-
-                Frm_Calender frm_Calender=new Frm_Calender()
+                //Frm_Register frg = new Frm_Register();
+                //frg.Show();
+                Frm_Register frg = new Frm_Register()
                 {
-                   DongTap = new Frm_Calender._dongTap(DongTab),
+                   DongTap = new Frm_Register.adongTap(DongTab),
                     frm = this,
                     TopLevel = false,
                     Dock = DockStyle.Fill,
                 };
-                t.AttachedControl.Controls.Add(frm_Calender);
-                frm_Calender.Show();
+                t.AttachedControl.Controls.Add(frg);
+                frg.Show();
                 tabcontrol_center.SelectedTabIndex = tabcontrol_center.Tabs.Count - 1;
             }
         }

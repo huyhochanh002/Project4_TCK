@@ -39,7 +39,6 @@ namespace QuanLiSinhVien_Project3
             this.ToolTipPassWord = new System.Windows.Forms.ToolTip(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.button1 = new System.Windows.Forms.Button();
-            this.btn_đk = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -117,7 +116,7 @@ namespace QuanLiSinhVien_Project3
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.button1.Location = new System.Drawing.Point(416, 381);
+            this.button1.Location = new System.Drawing.Point(416, 321);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 40);
@@ -125,18 +124,6 @@ namespace QuanLiSinhVien_Project3
             this.button1.Text = "Quên Mật Khẩu";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_đk
-            // 
-            this.btn_đk.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_đk.Location = new System.Drawing.Point(416, 321);
-            this.btn_đk.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_đk.Name = "btn_đk";
-            this.btn_đk.Size = new System.Drawing.Size(118, 40);
-            this.btn_đk.TabIndex = 7;
-            this.btn_đk.Text = "Đăng Kí";
-            this.btn_đk.UseVisualStyleBackColor = false;
-            this.btn_đk.Click += new System.EventHandler(this.btn_đk_Click);
             // 
             // label1
             // 
@@ -165,7 +152,6 @@ namespace QuanLiSinhVien_Project3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(708, 434);
-            this.Controls.Add(this.btn_đk);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnExit);
@@ -199,7 +185,6 @@ namespace QuanLiSinhVien_Project3
         private System.Windows.Forms.ToolTip ToolTipUserName;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btn_đk;
         private System.Windows.Forms.Button button1;
     }
 }

@@ -86,6 +86,7 @@ namespace QuanLiSinhVien_Project3
                     if (item.Username == txtUserName.Text && txtPassWord.Text == item.Pass)
                     {
                         gdc.ShowDialog();
+                        return;
                     }
                 }
             }
@@ -113,8 +114,7 @@ namespace QuanLiSinhVien_Project3
 
         private void btn_đk_Click(object sender, EventArgs e)
         {
-            Frm_Register frg = new Frm_Register();
-            frg.Show();
+
         }
     }
 }

@@ -140,7 +140,7 @@ namespace QuanLiSinhVien_Project3
             this.btnLichhoc.Name = "btnLichhoc";
             this.btnLichhoc.Size = new System.Drawing.Size(300, 50);
             this.btnLichhoc.TabIndex = 2;
-            this.btnLichhoc.Text = "Lịch học cho sinh viên";
+            this.btnLichhoc.Text = "Đăng Kí Tài Khoản Admin";
             this.btnLichhoc.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLichhoc.UseVisualStyleBackColor = false;
             this.btnLichhoc.Click += new System.EventHandler(this.btnLichhoc_Click);
