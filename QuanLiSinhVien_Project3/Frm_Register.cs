@@ -17,7 +17,9 @@ namespace QuanLiSinhVien_Project3
         {
             InitializeComponent();
         }
-
+        public GiaoDienChinh frm;
+        public delegate void adongTap();
+        public adongTap DongTap;
         private void Frm_Register_Load(object sender, EventArgs e)
         {
 
@@ -64,7 +66,6 @@ namespace QuanLiSinhVien_Project3
                 Userlist userl = new Userlist();
                 userl.GetUser(Userlist.pathfile);
                 kiemtra = 0;
-                this.Close();
             }
             else
             {
@@ -77,6 +78,11 @@ namespace QuanLiSinhVien_Project3
         private void txt_mkmoixacnhan_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DongTap();
         }
     }
 }
